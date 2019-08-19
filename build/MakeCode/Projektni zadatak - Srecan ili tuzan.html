@@ -1,0 +1,302 @@
+<!DOCTYPE html>
+
+<html xmlns="http://www.w3.org/1999/xhtml">
+  <head>
+    <meta charset="utf-8" />
+    <title>Projektni zadatak - Srecan ili tuzan &#8212; Runestone Interactive Overview</title>
+    <link rel="stylesheet" href="_static/basic.css" type="text/css" />
+    <link rel="stylesheet" href="_static/pygments.css" type="text/css" />
+    <link rel="stylesheet" type="text/css" href="_static/activecode.css?v=F471F95B" />
+    <link rel="stylesheet" type="text/css" href="_static/codemirror.css?v=1CE53237" />
+    <link rel="stylesheet" type="text/css" href="_static/clickable.css?v=58C4E18A" />
+    <link rel="stylesheet" type="text/css" href="_static/pytutor.css?v=239FC54E" />
+    <link rel="stylesheet" type="text/css" href="_static/modal-basic.css?v=8A1A42E4" />
+    <link rel="stylesheet" type="text/css" href="_static/datafile.css?v=C184EB8A" />
+    <link rel="stylesheet" type="text/css" href="_static/dragndrop.css?v=1FF7F927" />
+    <link rel="stylesheet" type="text/css" href="_static/fitb.css?v=3BA0E63E" />
+    <link rel="stylesheet" type="text/css" href="_static/CodeChat.css" />
+    <link rel="stylesheet" type="text/css" href="_static/matrixeq.css?v=58BC228F" />
+    <link rel="stylesheet" type="text/css" href="_static/parsons.css?v=2F3E13EE" />
+    <link rel="stylesheet" type="text/css" href="_static/js_lib/prettify.css?v=2A364B6B" />
+    <link rel="stylesheet" type="text/css" href="_static/poll.css?v=E220AC33" />
+    <link rel="stylesheet" type="text/css" href="_static/reveal.css?v=4A81D381" />
+    <link rel="stylesheet" type="text/css" href="_static/showEval.css?v=C6382F3" />
+    <link rel="stylesheet" type="text/css" href="_static/spreadsheet.css?v=B5F018A" />
+    <link rel="stylesheet" type="text/css" href="_static/jexcel.css" />
+    <link rel="stylesheet" type="text/css" href="_static/japp.css" />
+    <link rel="stylesheet" type="text/css" href="_static/tabbedstuff.css?v=424F1CC9" />
+    <link rel="stylesheet" type="text/css" href="_static/video.css?v=E5385B3B" />
+    <link rel="stylesheet" type="text/css" href="_static/webgldemo.css?v=B36B48D" />
+    <link rel="stylesheet" type="text/css" href="_static/webglinteractive.css?v=910DF1E1" />
+    <link rel="stylesheet" type="text/css" href="_static/karel.css" />
+    <link rel="stylesheet" type="text/css" href="_static/notes.css" />
+    <link rel="stylesheet" href="_static/user-highlights.css" type="text/css" />
+    <link rel="stylesheet" href="_static/ubuntu.css" type="text/css" />
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.1.1/css/all.css" type="text/css" />
+    <link rel="stylesheet" href="_static/bootstrap-4.0.0-dist/css/bootstrap.min.css" type="text/css" />
+    <link rel="stylesheet" href="_static/flatly.min.css" type="text/css" />
+    <link rel="stylesheet" href="_static/petlja.css" type="text/css" />
+    <script type="text/javascript" id="documentation_options" data-url_root="./" src="_static/documentation_options.js"></script>
+    <script type="text/javascript" src="_static/runestonebase.js"></script>
+    <script type="text/javascript" src="_static/jquery.js"></script>
+    <script type="text/javascript" src="_static/underscore.js"></script>
+    <script type="text/javascript" src="_static/doctools.js"></script>
+    <script type="text/javascript" src="_static/language_data.js"></script>
+    <script type="text/javascript" src="_static/jquery.highlight.js?v=F1C496C8"></script>
+    <script type="text/javascript" src="_static/bookfuncs.js?v=DAF21B91"></script>
+    <script type="text/javascript" src="_static/codemirror.js?v=94F552C9"></script>
+    <script type="text/javascript" src="_static/xml.js?v=236EDFF7"></script>
+    <script type="text/javascript" src="_static/css.js?v=623153CE"></script>
+    <script type="text/javascript" src="_static/python.js?v=14A28F1F"></script>
+    <script type="text/javascript" src="_static/htmlmixed.js?v=33B91944"></script>
+    <script type="text/javascript" src="_static/javascript.js?v=6F38CA04"></script>
+    <script type="text/javascript" src="_static/sql.js?v=1B4587EC"></script>
+    <script type="text/javascript" src="_static/jquery_i18n/CLDRPluralRuleParser.js?v=599B42B0"></script>
+    <script type="text/javascript" src="_static/jquery_i18n/jquery.i18n.js?v=88A1430F"></script>
+    <script type="text/javascript" src="_static/jquery_i18n/jquery.i18n.messagestore.js?v=AE15A4A1"></script>
+    <script type="text/javascript" src="_static/jquery_i18n/jquery.i18n.fallbacks.js?v=8ABDFE7F"></script>
+    <script type="text/javascript" src="_static/jquery_i18n/jquery.i18n.language.js?v=747279FF"></script>
+    <script type="text/javascript" src="_static/jquery_i18n/jquery.i18n.parser.js?v=7B020E13"></script>
+    <script type="text/javascript" src="_static/jquery_i18n/jquery.i18n.emitter.js?v=660E85C3"></script>
+    <script type="text/javascript" src="_static/jquery_i18n/jquery.i18n.emitter.bidi.js?v=54B21948"></script>
+    <script type="text/javascript" src="_static/activecode-i18n.en.js?v=70E93DF2"></script>
+    <script type="text/javascript" src="_static/skulpt.min.js?v=E7EA033F"></script>
+    <script type="text/javascript" src="_static/skulpt-stdlib.js?v=A9BBDEEE"></script>
+    <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/vega@4.0.0-rc.2/build/vega.js"></script>
+    <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/vega-lite@2.5.0/build/vega-lite.js"></script>
+    <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/vega-embed@3.14.0/build/vega-embed.js"></script>
+    <script type="text/javascript" src="_static/activecode.js?v=7C971D24"></script>
+    <script type="text/javascript" src="_static/clike.js?v=2DCE0756"></script>
+    <script type="text/javascript" src="_static/timed_activecode.js?v=5150FA78"></script>
+    <script type="text/javascript" src="_static/sql-wasm.js?v=44FE0709"></script>
+    <script type="text/javascript" src="_static/animationbase.js?v=A043C3A7"></script>
+    <script type="text/javascript" src="_static/mchoice.js?v=6F3B51A7"></script>
+    <script type="text/javascript" src="_static/timedmc.js?v=B010A457"></script>
+    <script type="text/javascript" src="_static/timed.js?v=6789FE30"></script>
+    <script type="text/javascript" src="_static/clickable.js?v=9560E65E"></script>
+    <script type="text/javascript" src="_static/timedclickable.js?v=93989C23"></script>
+    <script type="text/javascript" src="_static/d3.v2.min.js?v=836E01C"></script>
+    <script type="text/javascript" src="_static/jquery.ba-bbq.min.js?v=B64CF0A8"></script>
+    <script type="text/javascript" src="_static/jquery.jsPlumb-1.3.10-all-min.js?v=42F9EBEA"></script>
+    <script type="text/javascript" src="_static/pytutor.js?v=82B022B9"></script>
+    <script type="text/javascript" src="_static/codelens.js?v=CABECD49"></script>
+    <script type="text/javascript" src="_static/datafile.js?v=3ED1A80C"></script>
+    <script type="text/javascript" src="_static/dragndrop.js?v=3984FD8D"></script>
+    <script type="text/javascript" src="_static/timeddnd.js?v=378F237E"></script>
+    <script type="text/javascript" src="_static/fitb.js?v=8E40E713"></script>
+    <script type="text/javascript" src="_static/timedfitb.js?v=2AA17071"></script>
+    <script type="text/javascript" src="_static/lp.js?v=F137FF7A"></script>
+    <script type="text/javascript" src="_static/gas.js?v=F0D0F02E"></script>
+    <script type="text/javascript" src="https://hypothes.is/embed.js"></script>
+    <script type="text/javascript" src="_static/matrixeq.js?v=D64CFA5A"></script>
+    <script type="text/javascript" src="_static/js_lib/prettify.js?v=CA7E8928"></script>
+    <script type="text/javascript" src="_static/js_lib/hammer.min.js?v=73056367"></script>
+    <script type="text/javascript" src="_static/parsons.js?v=93EFFF39"></script>
+    <script type="text/javascript" src="_static/timedparsons.js?v=2EEA9E5A"></script>
+    <script type="text/javascript" src="_static/poll.js?v=6C59AE9F"></script>
+    <script type="text/javascript" src="_static/reveal.js?v=9C3AAF60"></script>
+    <script type="text/javascript" src="_static/shortanswer.js?v=BB0B99B1"></script>
+    <script type="text/javascript" src="_static/timed_shortanswer.js?v=B3A117D7"></script>
+    <script type="text/javascript" src="_static/showEval.js?v=C5CE0C81"></script>
+    <script type="text/javascript" src="_static/spreadsheet.js?v=CFA364DA"></script>
+    <script type="text/javascript" src="_static/jexcel.js"></script>
+    <script type="text/javascript" src="_static/japp.js"></script>
+    <script type="text/javascript" src="_static/tabbedstuff.js?v=5BE6106"></script>
+    <script type="text/javascript" src="_static/runestonevideo.js?v=53E888DE"></script>
+    <script type="text/javascript" src="_static/webglinteractive.js?v=2B768384"></script>
+    <script type="text/javascript" src="_static/FileSaver.min.js?v=8408C997"></script>
+    <script type="text/javascript" src="_static/Blob.js?v=AEC2447"></script>
+    <script type="text/javascript" src="_static/karelCorner.js"></script>
+    <script type="text/javascript" src="_static/karelRobot.js"></script>
+    <script type="text/javascript" src="_static/karelWorld.js"></script>
+    <script type="text/javascript" src="_static/karelRobotDrawer.js"></script>
+    <script type="text/javascript" src="_static/karelUI.js"></script>
+    <script type="text/javascript" src="_static/karel.js"></script>
+    <script type="text/javascript" src="_static/karel-i18n.en.js"></script>
+    <script type="text/javascript" src="_static/karel-i18n.en.js?v=7B551BE3"></script>
+    <script type="text/javascript" src="_static/notes.js"></script>
+    <script type="text/javascript" src="_static/pygamelib-init.js"></script>
+    <script type="text/javascript" src="_static/blockly/blockly_compressed.js"></script>
+    <script type="text/javascript" src="_static/blockly/blocks_compressed.js"></script>
+    <script type="text/javascript" src="_static/blockly/python_compressed.js"></script>
+    <script type="text/javascript" src="_static/blockly/msg-sr.js"></script>
+    <script type="text/javascript" src="_static/blockpy/utilities.js"></script>
+    <script type="text/javascript" src="_static/blockpy/python_errors.js"></script>
+    <script type="text/javascript" src="_static/blockpy/ast_node_visitor.js"></script>
+    <script type="text/javascript" src="_static/blockpy/abstract_interpreter.js"></script>
+    <script type="text/javascript" src="_static/blockpy/pytifa.js"></script>
+    <script type="text/javascript" src="_static/blockpy/abstract_interpreter_definitions.js"></script>
+    <script type="text/javascript" src="_static/blockpy/python_to_blockly.js"></script>
+    <script type="text/javascript" src="_static/blockpy/imported.js"></script>
+    <script type="text/javascript" src="_static/blockpy/blocks/class.js"></script>
+    <script type="text/javascript" src="_static/blockpy/blocks/comment.js"></script>
+    <script type="text/javascript" src="_static/blockpy/blocks/comprehensions.js"></script>
+    <script type="text/javascript" src="_static/blockpy/blocks/dict.js"></script>
+    <script type="text/javascript" src="_static/blockpy/blocks/if.js"></script>
+    <script type="text/javascript" src="_static/blockpy/blocks/io.js"></script>
+    <script type="text/javascript" src="_static/blockpy/blocks/lists.js"></script>
+    <script type="text/javascript" src="_static/blockpy/blocks/sets.js"></script>
+    <script type="text/javascript" src="_static/blockpy/blocks/loops.js"></script>
+    <script type="text/javascript" src="_static/blockpy/blocks/parking.js"></script>
+    <script type="text/javascript" src="_static/blockpy/blocks/tuple.js"></script>
+    <script type="text/javascript" src="_static/blockpy/blocks/turtles.js"></script>
+    <script type="text/javascript" src="_static/blockpy/blocks/text.js"></script>
+    <script type="text/javascript" src="_static/blockpy-modal.js"></script>
+    <script type="text/javascript" src="_static/jquery-ui-1.10.3.custom.min.js"></script>
+    <script type="text/javascript" src="_static/jquery-fix.js"></script>
+    <script type="text/javascript" src="_static/bootstrap-4.0.0-dist/js/bootstrap.min.js"></script>
+    <script type="text/javascript" src="_static/bootstrap-4.0.0-dist/js/bootstrap.bundle.min.js"></script>
+    <script type="text/javascript" src="_static/bootstrap-sphinx.js"></script>
+    <script type="text/javascript" src="_static/waypoints.min.js"></script>
+    <script type="text/javascript" src="_static/rangy-core.js"></script>
+    <script type="text/javascript" src="_static/rangy-textrange.js"></script>
+    <script type="text/javascript" src="_static/rangy-cssclassapplier.js"></script>
+    <script type="text/javascript" src="_static/user-highlights.js"></script>
+    <script type="text/javascript" src="_static/jquery.idle-timer.js"></script>
+    <script type="text/javascript" src="_static/processing-1.4.1.min.js"></script>
+    <script type="text/javascript" src="_static/jquery.hotkey.js"></script>
+    <script type="text/javascript" src="_static/jquery-migrate-1.2.1.min.js"></script>
+    <link rel="index" title="Index" href="genindex.html" />
+    <link rel="search" title="Search" href="search.html" />
+    <link rel="next" title="Projektni zadatak - Napred - Nazad" href="Projektni zadatak - Napred - Nazad.html" />
+    <link rel="prev" title="Projektni zadatak - Upotreba senzora" href="Projektni zadatak - Upotreba senzora.html" />
+<meta charset='utf-8'>
+<meta http-equiv='X-UA-Compatible' content='IE=edge,chrome=1'>
+<meta content='width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0' name='viewport' />
+<link rel="shortcut icon" href="_static/favicon.ico" type="image/ico" />
+
+<script type="text/javascript">
+  eBookConfig = {};
+  eBookConfig.host = 'http://127.0.0.1:8000' ? 'http://127.0.0.1:8000' : 'http://127.0.0.1:8000';
+  eBookConfig.app = eBookConfig.host+'/runestone';
+  eBookConfig.ajaxURL = eBookConfig.app+'/ajax/';
+  eBookConfig.course = 'MakeCode';
+  eBookConfig.logLevel = 0;
+  eBookConfig.loginRequired = false;
+  eBookConfig.build_info = "unknown";
+  eBookConfig.isLoggedIn = false;
+  eBookConfig.useRunestoneServices = false;
+  eBookConfig.python3 = true;
+  eBookConfig.basecourse = 'MakeCode';
+  eBookConfig.runestone_version = '4.0.4';
+</script>
+
+<div id="fb-root"></div>
+<script>
+  (function(d, s, id) {
+    var js, fjs = d.getElementsByTagName(s)[0];
+    if (d.getElementById(id)) return;
+    js = d.createElement(s); js.id = id;
+    js.src = "//connect.facebook.net/en_US/all.js#xfbml=1&status=0";
+    fjs.parentNode.insertBefore(js, fjs);
+  }(document, 'script', 'facebook-jssdk'));
+</script>
+
+
+
+  </head><body>
+
+
+<!-- Begin navbar -->
+
+<nav id="navbar" class="navbar navbar-default navbar-fixed-top" role="navigation">
+
+  <div class="container">
+
+    <div class="navbar-header">
+      <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1">
+        <span class="sr-only">Toggle navigation</span>
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+      </button>
+      <a class="navbar-brand" href="http://petlja.org/">Petlja</a>
+    </div>
+
+    <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
+      <ul class="nav navbar-nav">
+        <li class="active"><a href="/">MakeCode</a></li>
+      </ul>
+    </div>
+  </div>
+</nav>
+
+
+<div class="container col-md-12" id="continue-reading"></div>
+
+<div class="container col-md-8 col-md-offset-2" id="main-content">
+  
+  <div class="section" id="projektni-zadatak-srecan-ili-tuzan">
+<h1>Projektni zadatak - Srecan ili tuzan<a class="headerlink" href="#projektni-zadatak-srecan-ili-tuzan" title="Permalink to this headline">¶</a></h1>
+<p>Do sada, sve programe koje smo pisali, bili su linijski programi, tačnije programi koji se izvršavaju redom naredbu po naredbu do kraja programa.
+Za razliku od ovakvih programa, gde se svaki korak, odnosno svaka naredba, izvršava samo jedanput, u algoritmima odlučivanja, tačnije razgranatim (uslovnim) algoritmima neke naredbe će se izvršiti, a neke ne, u zavisnosti od ispunjenosti uslova.</p>
+<p>Upotrebu blokova odlučivanja demonstriraćemo kreiranjem progrаma kojim se nа ekrаnu EV3 menjа slikа u zаvisnoti od togа dа li je senzor dodirа pritisnut ili ne. Ako je senzor pritisut, EV3 je srećаn - na displeju se prikazuje nаsmejаno lice, а ko nije prikazuje se tužno lice.</p>
+<p>U nekim programima izvršavanje blokova ne mora uvek da ide redosledom njihovog navođenja u programu. Blokovi odlučivanja se koriste u slučаju kаdа trebа odаbrаti koji će niz blokova da bude izvršen.
+Kojа će linija (grana) koda biti izаbrаnа, zаvisi od toga da li je uslov ispunjen ili ne. Kod robota da li je uslov ispunjen ili ne zavisi od informacija koje robot dobija od senzorа.</p>
+<p>Da bismo kreirali program kojim se u zavisnosti od stanja senzora dodira (pritisnut ili ne) dobili prikaz nasmejanog ili tužnog lica, potrebno je da pokrenemo nov projekat.</p>
+<p>U blok <img alt="forever" src="_images/46.png" /> (nalazi se u kategoriji <img alt="Loops" src="_images/431.png" />) prevuci blok <img alt="if..then" src="_images/45.png" /> iz kategorije <img alt="Logic" src="_images/44.png" />. U delu za uslov <img alt="uslov" src="_images/47.png" /> prevucite blok <img alt="touch" src="_images/481.png" />.
+Na osnovu postavke zadatka, kada je senzor pritisnut treba prikazati sliku srećnog lica. Prevući blok <img alt="show" src="_images/50.png" /> iz kategorije <img alt="Basic" src="_images/49.png" /> u granu DA.</p>
+<p>Izgled programa kada je senzor pritisnut i simulacija.</p>
+<img alt="_images/50_.png" class="align-center" src="_images/50_.png" />
+<p>Uočavamo da kada otpustimo taster da je slika nasmejanog lica još uvek na ekranu EV3 brika. Da bismo ispravili ovu grešku koristimo blok <img alt="Clear" src="_images/54.png" />.</p>
+<p>Izgled programa kada je senzor pritisnut.</p>
+<img alt="_images/55.png" class="align-center" src="_images/55.png" />
+<p>Na osnovu zadatka postoji i uslov da kada senzor nije pritisnut treba da bude prikazano tužno lice na ekranu EV3 brika. Da bi smo to postigli potrebno je da dodamo granu else, klikom na znak <img alt="Plus" src="_images/56.png" />. U okviru te grane postavljamo blok za prikaz slike tužnog lica.</p>
+<p>Konačni izgled koda kada je senzor dodira pritisnut ili ne i simulacija:</p>
+<img alt="_images/57_.png" class="align-center" src="_images/57_.png" />
+<p>U ovom primeru gornjа linijа kodа će se izvršiti аko je tаster pritisnut, а donjа linijа аko nije.</p>
+<p>Radi ilustracije uradićemo još jedan primer: Kreirati aplikaciju kojom se robot kreće nаpred, sve dok ne vidi neku prepreku (prepreka na rastojnju manjem od 30 cm). Kаdа vidi prepreku skreće desno, pokušаvаjući dа je zаobiće.</p>
+<p>U blok <img alt="forever" src="_images/46.png" /> (nalazi se u kategoriji <img alt="Loops" src="_images/431.png" />) prevuci blok <img alt="if..then" src="_images/45.png" /> iz kategorije <img alt="Logic" src="_images/44.png" />. U delu za uslov <img alt="uslov" src="_images/47.png" /> prevucite blok <img alt="operacija" src="_images/59.png" /> koji predstavlja operator poređenja. Da bismo napravili uslov da rastojenje robota od prepreke manje je manje od 30 formiramo blok <img alt="manje30" src="_images/611.png" />. Na osnovu postavke zadatka, kada je prepreka na rastojanju manjem od 30cm robot skreće u desno, u suprotnom (ako uslov nije ispunjen, tačnije ako robot ne vidi prepreku) kreće se pravo.</p>
+<p>U kod dodajmo blokove za skretanje <img alt="skreni" src="_images/62.png" /> i za kretanje pravo <img alt="pravo" src="_images/631.png" />.</p>
+<p>Izgled konačnog koda:</p>
+<img alt="_images/601.png" class="align-center" src="_images/601.png" />
+<p>Priključite EV3 Brick na računar pomoću USB kabla i klikom na dugme <a class="reference internal" href="_images/download.png"><img alt="dugme1" src="_images/download.png" style="width: 199px;" /></a> preuzmite .uf2 fajl na vaš računar. Prevlačenjem fajla na EV3 on je spreman za rad.</p>
+</div>
+
+
+  
+      <div class="col-md-12">
+<ul class="pager">
+        <li id="relations-prev" title='Претходно поглавље - Projektni zadatak - Upotreba senzora' data-toggle="tooltip"><a href="Projektni zadatak - Upotreba senzora.html">Претходно поглавље</a></li>
+    
+        <li id="relations-next" title='Следеће поглавље - Projektni zadatak - Napred - Nazad' data-toggle="tooltip"><a href="Projektni zadatak - Napred - Nazad.html">Следеће поглавље</a></li>
+</ul>
+
+<script type="text/javascript">
+
+  $('#relations-prev').tooltip({'placement':'right', 'selector': '', 'delay': { show: 100, hide: 50}});
+  $('#relations-next').tooltip({'placement':'left', 'selector': '', 'delay': { show: 100, hide: 50}});
+
+</script>
+</div>
+  
+</div>
+<footer class="footer col-md-12">
+    <div class="container">
+        <div class="text-center">
+            <hr>
+            <p class="text-muted">
+                <span class="pull-left">&copy; 2017 Petlja (Created using <a href="http://runestoneinteractive.org/">Runestone</a>)</span>
+            </p>
+        </div>
+    </div>
+</footer>
+
+
+
+<script type="text/javascript">
+  var _gaq = _gaq || [];
+  _gaq.push(['_setAccount', 'UA-32029811-1']);
+  _gaq.push(['_trackPageview']);
+
+  (function() {
+    var ga = document.createElement('script'); ga.type = 'text/javascript'; ga.async = true;
+    ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js';
+    var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s);
+  })();
+</script>
+
+
+
+  </body>
+</html>
