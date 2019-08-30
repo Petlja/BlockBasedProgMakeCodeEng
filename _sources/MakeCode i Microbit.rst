@@ -4,7 +4,7 @@ Micro:bit – Osnovne karakteristike i komponente
 Pre nego što započnemo priču o programiranju Microbit-a preko MakeCode hajde da se upoznamo sa osnovnim komponentama i karakteristikama Micro:bita i radnim okruženjem.
 
 Micro:bit – Osnovne karakteristike i komponente
-:::::::::::::::::::::::::::::::::::::::::::::::
+-----------------------------------------------
 
 Micro:bit je prenosivi, korisnički programabilni računar koji ima 32-bitni ARM Cortex-M0 procesor koji radi na 16MHz i ima samo 16KB RAM memorije, senzore i ekran koji čine 25 LED diode. Ima konektore, pet ulaza i izlaza (I/O) koji se koriste za povezivanje Micro:bit sa drugim uređajima ili senzorima, ima Bluetooth podršku, napaja se sa dve AA baterije.
 I ono što je najvažnije ima mogućnost programiranja.
@@ -105,18 +105,33 @@ Komponenta za radio omogućava bežično komuniciranje između dva ili više Mic
 
 USB ulaz omogućava da povežemo Micro:bit sa računarom preko mikro USB kabla, koji će napuniti uređaj i omogućiti da na njega preuzimamo programske kodove.
 
-Radno okruženje MakeCode za Micro:bit
-:::::::::::::::::::::::::::::::::::::
+Radno okruzenje
+:::::::::::::::
 
-Radno okruženje pokrećemo preko brauzera pokretanjem stranice https://makecode.microbit.org. Ovaj online editor daje mogućnost programiranja u JavaScript-u ili u grafičkom (blokovskom) programiranju gde se naredbe slažu tehnikom „drag and drop“.
+Radno okruženje pokrećemo preko brauzera pokretanjem stranice https://makecode.microbit.org.
 
-Web okruženje micro:bita u Makecode editoru sa leve strane sadrži simulator (1) koji odmah nakon pisanja programa, isti izvršava, pa se kroz vizuelizaciju vrlo laku mogu uočiti i greške koje se mogu javiti u programu. U sredini okruženja postavljen je kategoriju (2) u kome se nalaze grupisane naredbe (blokovi). Sa desne strane nalazi se radna površina (3) na koju se prevlače naredbe i na kojoj se sklapaju programi.
+Nov projekat pokrećemo klikom na dugme New Project |newproject| .
+
+.. |newproject| image:: ../_images/_imageMicroBit/p1.png
+    :width: 90px
+
+
+Ovaj online editor daje mogućnost programiranja u JavaScript-u ili u grafičkom (blokovskom) programiranju gde se naredbe slažu tehnikom „drag and drop“. Mi ćemo se baviti blokovskim programiranjem.
+
+Web okruženje micro:bita u Makecode editoru sa leve strane sadrži simulator (1) koji odmah nakon pisanja programa, isti izvršava, pa se kroz vizuelizaciju vrlo laku mogu uočiti i greške koje se mogu javiti u programu. U sredini okruženja postavljen je meni (2) u kome se nalaze grupisane naredbe. Sa desne strane nalazi se radna površina (3) na koju se prevlače naredbe i na kojoj se sklapaju programi.
+
+
+Web okruženje micro:bita u Makecode editoru sa leve strane sadrži simulator (1) koji odmah nakon pisanja programa, isti izvršava, pa se kroz vizuelizaciju vrlo laku mogu uočiti i greške koje se mogu javiti u programu. U sredini okruženja postavljen je meni (2) u kome se nalaze grupisane naredbe. Sa desne strane nalazi se radna površina (3) na koju se prevlače naredbe i na kojoj se sklapaju programi.
 
 .. image:: ../_images/_imageMicroBit/2.png
       :align: center
 
-Kategorije se sastoji od blokova (naredbi) različitih namena. Blok „on start” je jedan od osnovnih blokova, i on se izvršava samo jednom po pokretanju na simulatoru ili Micro:bit-u.
-U MakeCode, programi su sačinjeni od različitih i međusobno povezanih blokova.
+Kada se pokrene novi projekat na radnoj površini MakeCode se nalaze dva bloka: on start i forever. Blok |onstart| je jedan od osnovnih blokova, i blokovi u okviru njega se izvršavaju samo jednom dok se program ne zvrši. Dok je blok |forever| blok u okviru koga će se naredbe izvršavati beskonačan broj puta. Njegovo izvršavanje nikada se ne prekida samostalno. Prekida se klikom na dugme za prestanak rada programa (Stop dugme |stop|).
+U MakeCode, programi su sačinjeni od različitih i međusobno povezanih blokova. Blokovi (naredbe) su podeljeni po kategorijama različitih namena.
+
+.. |stop| image:: ../_images/_imageMicroBit/p2.png
+.. |onstart| image:: ../_images/_imageMicroBit/s20.png
+.. |forever| image:: ../_images/_imageMicroBit/s1.png
 
 .. image:: ../_images/_imageMicroBit/3_.png
       :align: center
@@ -128,6 +143,22 @@ Kada se klikne desnim klikom miša na blok dobija se padajući kategoriju u kome
 
 .. image:: ../_images/_imageMicroBit/4_.png
       :align: center
+
+
+Pre nego što započnemo kreiranje zanimljivih projekata korišćenjem Micro:bit-a pokušaćemo da se upoznamo sa osnovama programiranja u radnom okruženju MakeCode.
+
+.. toctree::
+   :maxdepth: 2
+
+   Blokovi kategorije Basic.rst
+   Rad sa blokovima iz kategorije Input.rst
+   Blokovi iz kategorija Music.rst
+   Rad sa blokovima iz kategorije Led.rst
+   Rad sa blokovima iz kategorija Math i Variables.rst
+   Rad sa blokovima iz kategorija Logic.rst
+   Rad sa blokovima iz kategorija Loops.rst
+   Rad sa blokovima iz kategorije Radio.rst
+
 
 Projekti
 ::::::::
