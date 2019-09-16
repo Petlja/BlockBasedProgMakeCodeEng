@@ -168,6 +168,6 @@ All projects are done step by step, so everyone can do them again. All procedure
 
       Project Task - the Bracelet.rst
       Project Task - the Singing Fruits.rst
-      Project Task - the Traffic light.rst
-      Project Task - the House alarm.rst
+      Project Task - the Traffic Light.rst
+      Project Task - the House Alarm.rst
       Project Task - the Wire.rst

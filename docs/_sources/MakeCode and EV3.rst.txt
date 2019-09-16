@@ -259,9 +259,9 @@ In the following tutorials, we will introduce some interesting projects for prog
    .. toctree::
       :maxdepth: 2
 
-      Project Task - Robot movement.rst
-      Project Task - Displaying text and graphics.rst
-      Project Task - Using the sensors.rst
-      Project Task - Happy or sad.rst
-      Project Task - Forward and backward.rst
-      Project Task - Middle button.rst
+      Project Task - Robot Movement.rst
+      Project Task - Displaying Text and Graphics.rst
+      Project Task - Using the Sensors.rst
+      Project Task - Happy or Sad.rst
+      Project Task - Forward and Backward.rst
+      Project Task - Middle Button.rst
