@@ -1,6 +1,6 @@
-==========================
+=======================
 Programming in MakeCode
-==========================
+=======================
 
 This interactive manual will help you master the basics of programming in the visual work environment of MakeCode. Throughout this guide, we will demonstrate the basics of programming using the Micro:bit device, Mindstorm Lego EV3 robot and Minecraft 3D environment.
 
