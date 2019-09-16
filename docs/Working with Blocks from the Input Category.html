@@ -1,0 +1,344 @@
+<!DOCTYPE html>
+
+<html xmlns="http://www.w3.org/1999/xhtml" lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <title>Working with Blocks from the Input Category &#8212; Block-based programming in MakeCode</title>
+    <link rel="stylesheet" href="_static/basic.css" type="text/css" />
+    <link rel="stylesheet" href="_static/pygments.css" type="text/css" />
+    <link rel="stylesheet" type="text/css" href="_static/activecode.css" />
+    <link rel="stylesheet" type="text/css" href="_static/codemirror.css" />
+    <link rel="stylesheet" type="text/css" href="_static/clickable.css" />
+    <link rel="stylesheet" type="text/css" href="_static/pytutor.css" />
+    <link rel="stylesheet" type="text/css" href="_static/modal-basic.css" />
+    <link rel="stylesheet" type="text/css" href="_static/datafile.css" />
+    <link rel="stylesheet" type="text/css" href="_static/dragndrop.css" />
+    <link rel="stylesheet" type="text/css" href="_static/fitb.css" />
+    <link rel="stylesheet" type="text/css" href="_static/matrixeq.css" />
+    <link rel="stylesheet" type="text/css" href="_static/parsons.css" />
+    <link rel="stylesheet" type="text/css" href="_static/lib/prettify.css" />
+    <link rel="stylesheet" type="text/css" href="_static/poll.css" />
+    <link rel="stylesheet" type="text/css" href="_static/showEval.css" />
+    <link rel="stylesheet" type="text/css" href="_static/tabbedstuff.css" />
+    <link rel="stylesheet" type="text/css" href="https://stackpath.bootstrapcdn.com/bootstrap/4.2.1/css/bootstrap.min.css" />
+    <link rel="stylesheet" type="text/css" href="_static/video.css" />
+    <link rel="stylesheet" type="text/css" href="_static/karel.css" />
+    <link rel="stylesheet" type="text/css" href="_static/notes.css" />
+    <link rel="stylesheet" href="_static/user-highlights.css" type="text/css" />
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.1.1/css/all.css" type="text/css" />
+    <link rel="stylesheet" href="_static/bootstrap-4.0.0-dist/css/bootstrap.min.css" type="text/css" />
+    <link rel="stylesheet" href="_static/flatly.min.css" type="text/css" />
+    <link rel="stylesheet" href="_static/petlja.css" type="text/css" />
+    <script type="text/javascript" id="documentation_options" data-url_root="./" src="_static/documentation_options.js"></script>
+    <script type="text/javascript" src="_static/runestonebase.js"></script>
+    <script type="text/javascript" src="_static/jquery.js"></script>
+    <script type="text/javascript" src="_static/underscore.js"></script>
+    <script type="text/javascript" src="_static/doctools.js"></script>
+    <script type="text/javascript" src="_static/language_data.js"></script>
+    <script type="text/javascript" src="_static/jquery.highlight.js"></script>
+    <script type="text/javascript" src="_static/bookfuncs.js"></script>
+    <script type="text/javascript" src="_static/codemirror.js"></script>
+    <script type="text/javascript" src="_static/xml.js"></script>
+    <script type="text/javascript" src="_static/css.js"></script>
+    <script type="text/javascript" src="_static/python.js"></script>
+    <script type="text/javascript" src="_static/htmlmixed.js"></script>
+    <script type="text/javascript" src="_static/javascript.js"></script>
+    <script type="text/javascript" src="_static/jquery_i18n/CLDRPluralRuleParser.js"></script>
+    <script type="text/javascript" src="_static/jquery_i18n/jquery.i18n.js"></script>
+    <script type="text/javascript" src="_static/jquery_i18n/jquery.i18n.messagestore.js"></script>
+    <script type="text/javascript" src="_static/jquery_i18n/jquery.i18n.fallbacks.js"></script>
+    <script type="text/javascript" src="_static/jquery_i18n/jquery.i18n.language.js"></script>
+    <script type="text/javascript" src="_static/jquery_i18n/jquery.i18n.parser.js"></script>
+    <script type="text/javascript" src="_static/jquery_i18n/jquery.i18n.emitter.js"></script>
+    <script type="text/javascript" src="_static/jquery_i18n/jquery.i18n.emitter.bidi.js"></script>
+    <script type="text/javascript" src="_static/activecode-i18n.en.js"></script>
+    <script type="text/javascript" src="_static/skulpt.min.js"></script>
+    <script type="text/javascript" src="_static/skulpt-stdlib.js"></script>
+    <script type="text/javascript" src="_static/activecode.js"></script>
+    <script type="text/javascript" src="_static/clike.js"></script>
+    <script type="text/javascript" src="_static/timed_activecode.js"></script>
+    <script type="text/javascript" src="_static/animationbase.js"></script>
+    <script type="text/javascript" src="_static/mchoice.js"></script>
+    <script type="text/javascript" src="_static/timedmc.js"></script>
+    <script type="text/javascript" src="_static/timed.js"></script>
+    <script type="text/javascript" src="_static/mchoice-i18n.en.js"></script>
+    <script type="text/javascript" src="_static/clickable.js"></script>
+    <script type="text/javascript" src="_static/timedclickable.js"></script>
+    <script type="text/javascript" src="_static/d3.v2.min.js"></script>
+    <script type="text/javascript" src="_static/jquery.ba-bbq.min.js"></script>
+    <script type="text/javascript" src="_static/jquery.jsPlumb-1.3.10-all-min.js"></script>
+    <script type="text/javascript" src="_static/pytutor.js"></script>
+    <script type="text/javascript" src="_static/codelens.js"></script>
+    <script type="text/javascript" src="_static/datafile.js"></script>
+    <script type="text/javascript" src="_static/dragndrop.js"></script>
+    <script type="text/javascript" src="_static/timeddnd.js"></script>
+    <script type="text/javascript" src="_static/dragndrop-i18n.en.js"></script>
+    <script type="text/javascript" src="_static/fitb.js"></script>
+    <script type="text/javascript" src="_static/timedfitb.js"></script>
+    <script type="text/javascript" src="_static/fitb-i18n.en.js"></script>
+    <script type="text/javascript" src="_static/matrixeq.js"></script>
+    <script type="text/javascript" src="_static/lib/prettify.js"></script>
+    <script type="text/javascript" src="_static/lib/hammer.min.js"></script>
+    <script type="text/javascript" src="_static/parsons.js"></script>
+    <script type="text/javascript" src="_static/parsons-i18n.en.js"></script>
+    <script type="text/javascript" src="_static/timedparsons.js"></script>
+    <script type="text/javascript" src="_static/poll.js"></script>
+    <script type="text/javascript" src="_static/reveal.js"></script>
+    <script type="text/javascript" src="_static/shortanswer.js"></script>
+    <script type="text/javascript" src="_static/timed_shortanswer.js"></script>
+    <script type="text/javascript" src="_static/showEval.js"></script>
+    <script type="text/javascript" src="_static/tabbedstuff.js"></script>
+    <script type="text/javascript" src="_static/runestonevideo.js"></script>
+    <script type="text/javascript" src="_static/karelCorner.js"></script>
+    <script type="text/javascript" src="_static/karelRobot.js"></script>
+    <script type="text/javascript" src="_static/karelWorld.js"></script>
+    <script type="text/javascript" src="_static/karelRobotDrawer.js"></script>
+    <script type="text/javascript" src="_static/karelUI.js"></script>
+    <script type="text/javascript" src="_static/karel.js"></script>
+    <script type="text/javascript" src="_static/karel-i18n.en.js"></script>
+    <script type="text/javascript" src="_static/notes.js"></script>
+    <script type="text/javascript" src="_static/pygamelib-init.js"></script>
+    <script type="text/javascript" src="_static/blockly/blockly_compressed.js"></script>
+    <script type="text/javascript" src="_static/blockly/blocks_compressed.js"></script>
+    <script type="text/javascript" src="_static/blockly/python_compressed.js"></script>
+    <script type="text/javascript" src="_static/blockly/msg-sr.js"></script>
+    <script type="text/javascript" src="_static/blockpy/utilities.js"></script>
+    <script type="text/javascript" src="_static/blockpy/python_errors.js"></script>
+    <script type="text/javascript" src="_static/blockpy/ast_node_visitor.js"></script>
+    <script type="text/javascript" src="_static/blockpy/abstract_interpreter.js"></script>
+    <script type="text/javascript" src="_static/blockpy/pytifa.js"></script>
+    <script type="text/javascript" src="_static/blockpy/abstract_interpreter_definitions.js"></script>
+    <script type="text/javascript" src="_static/blockpy/python_to_blockly.js"></script>
+    <script type="text/javascript" src="_static/blockpy/imported.js"></script>
+    <script type="text/javascript" src="_static/blockpy/blocks/class.js"></script>
+    <script type="text/javascript" src="_static/blockpy/blocks/comment.js"></script>
+    <script type="text/javascript" src="_static/blockpy/blocks/comprehensions.js"></script>
+    <script type="text/javascript" src="_static/blockpy/blocks/dict.js"></script>
+    <script type="text/javascript" src="_static/blockpy/blocks/if.js"></script>
+    <script type="text/javascript" src="_static/blockpy/blocks/io.js"></script>
+    <script type="text/javascript" src="_static/blockpy/blocks/lists.js"></script>
+    <script type="text/javascript" src="_static/blockpy/blocks/sets.js"></script>
+    <script type="text/javascript" src="_static/blockpy/blocks/loops.js"></script>
+    <script type="text/javascript" src="_static/blockpy/blocks/parking.js"></script>
+    <script type="text/javascript" src="_static/blockpy/blocks/tuple.js"></script>
+    <script type="text/javascript" src="_static/blockpy/blocks/turtles.js"></script>
+    <script type="text/javascript" src="_static/blockpy/blocks/text.js"></script>
+    <script type="text/javascript" src="_static/blockpy-modal.js"></script>
+    <script type="text/javascript" src="_static/jquery-ui-1.10.3.custom.min.js"></script>
+    <script type="text/javascript" src="_static/jquery-fix.js"></script>
+    <script type="text/javascript" src="_static/bootstrap-4.0.0-dist/js/bootstrap.min.js"></script>
+    <script type="text/javascript" src="_static/bootstrap-4.0.0-dist/js/bootstrap.bundle.min.js"></script>
+    <script type="text/javascript" src="_static/bootstrap-sphinx.js"></script>
+    <script type="text/javascript" src="_static/waypoints.min.js"></script>
+    <script type="text/javascript" src="_static/rangy-core.js"></script>
+    <script type="text/javascript" src="_static/rangy-textrange.js"></script>
+    <script type="text/javascript" src="_static/rangy-cssclassapplier.js"></script>
+    <script type="text/javascript" src="_static/user-highlights.js"></script>
+    <script type="text/javascript" src="_static/jquery.idle-timer.js"></script>
+    <script type="text/javascript" src="_static/processing-1.4.1.min.js"></script>
+    <script type="text/javascript" src="_static/jquery.hotkey.js"></script>
+    <script type="text/javascript" src="_static/jquery-migrate-1.2.1.min.js"></script>
+    <link rel="index" title="Index" href="genindex.html" />
+    <link rel="search" title="Search" href="search.html" />
+    <link rel="next" title="Working with Blocks from the Led Category" href="Working with Blocks from the Led Category.html" />
+    <link rel="prev" title="Blocks from the Basic Category" href="Blocks from the Basic Category.html" />
+<meta charset='utf-8'>
+<meta http-equiv='X-UA-Compatible' content='IE=edge,chrome=1'>
+<meta content='width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0' name='viewport' />
+<link rel="shortcut icon" href="_static/favicon.ico" type="image/ico" />
+
+<script type="text/javascript">
+  eBookConfig = {};
+  eBookConfig.host = 'http://127.0.0.1:8000' ? 'http://127.0.0.1:8000' : 'http://127.0.0.1:8000';
+  eBookConfig.app = eBookConfig.host+'/runestone';
+  eBookConfig.ajaxURL = eBookConfig.app+'/ajax/';
+  eBookConfig.course = 'MakeCode';
+  eBookConfig.logLevel = 0;
+  eBookConfig.loginRequired = false;
+  eBookConfig.build_info = "";
+  eBookConfig.isLoggedIn = false;
+  eBookConfig.useRunestoneServices = false;
+  eBookConfig.python3 = false;
+  eBookConfig.basecourse = 'MakeCode';
+  eBookConfig.runestone_version = '3.1.1';
+  eBookConfig.imagesDir = '_images/';
+  eBookConfig.staticDir = '_static/';
+  if(typeof(Sk) != "undefined")
+      Sk.imgPath = eBookConfig.imagesDir;
+</script>
+
+<div id="fb-root"></div>
+
+
+
+  </head><body>
+
+
+<!-- Begin navbar -->
+
+<nav id="navbar" class="navbar navbar-default navbar-fixed-top" role="navigation">
+
+  <div class="container">
+
+    <div class="navbar-header">
+      <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1">
+        <span class="sr-only">Toggle navigation</span>
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+      </button>
+     <img src="_static/img/logo.png" style="width:80px; height: 80px;"> 
+    </div>
+
+    <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1" style="margin-top: 10px; margin-left: 25px;">
+      <ul class="nav navbar-nav">
+        <li class="active"><a href="./">Block-based programming in MakeCode</a></li>
+      </ul>
+    </div>
+  </div>
+</nav>
+
+
+<div class="container col-md-12" id="continue-reading"></div>
+
+<div class="container col-md-8 col-md-offset-2" id="main-content">
+  
+  <div class="section" id="working-with-blocks-from-the-input-category">
+<h1>Working with Blocks from the Input Category<a class="headerlink" href="#working-with-blocks-from-the-input-category" title="Permalink to this headline">¶</a></h1>
+<p>The computer processes the data it receives from the input (from the user (pressing a button,…) or the environment (values obtained by sensor readings)). In MakeCode, there is a category of blocks which enables working with input data, more specifically a block category that allows a program to “perform certain actions” based on the information it receives from the user or the environment.</p>
+<p>The <img alt="input" src="_images/s26.png" /> category contains blocks (commands), which process data obtained from users (by clicking buttons) or the environment (by reading sensory data).</p>
+<img alt="_images/p8.png" class="align-center" src="_images/p8.png" />
+<p>The input data can be obtained from pressing the button <code class="docutils literal notranslate"><span class="pre">A</span></code>, <code class="docutils literal notranslate"><span class="pre">B</span></code> or <code class="docutils literal notranslate"><span class="pre">A+B</span></code>, as well as from reading the values ​​of the sensors for light, temperature, and the accelerometer.</p>
+<p>We want to create a program which displays the temperature (in degrees Celsius) when button <code class="docutils literal notranslate"><span class="pre">A</span></code> is pressed.</p>
+
+            <div class="course-box course-box-question course-content">
+            <ul data-component="multiplechoice" data-multipleanswers="false"  id="L2Z1">
+            <p>Q-2: How many times will the blocks inside of the <img alt="onstart" src="_images/s20.png" /> block be executed?</p>
+
+            <li data-component="answer" data-correct id="L2Z1_opt_a">once.</li><li data-component="feedback" id="L2Z1_opt_a">Bravo! The onstart block is one of the blocks from the Basic category, and blocks within it are executed only once during the running of the program.</li>
+            
+            <li data-component="answer"  id="L2Z1_opt_b">an infinite number of times.</li><li data-component="feedback" id="L2Z1_opt_b">The forever block is the block within which commands will be executed an infinite number of times. The running of this block will never stop on its own. To stop the running of this block, you need to press the stop button (|stop|).</li>
+            
+
+            </ul>
+            </div>
+            <p>As we have already seen in the examples from the previous lesson, how the program starts and runs depends on which block was applied, <img alt="onstart" src="_images/s20.png" /> or <img alt="forever" src="_images/s1.png" />.</p>
+<p>In order to enable data entry, that is, to use button <code class="docutils literal notranslate"><span class="pre">A</span></code> to start or run the program, we need to select the <img alt="onbutton" src="_images/p9.png" /> from the <img alt="input" src="_images/s26.png" /> category, and from its drop-down list we need to choose the button A.</p>
+<p>The block <img alt="onbutton" src="_images/p9.png" /> starts the program and all blocks included in it are executed.</p>
+<p>We drag the <code class="docutils literal notranslate"><span class="pre">on</span> <span class="pre">button</span> <span class="pre">...</span> <span class="pre">pressed</span></code> block onto the work surface, and then we insert in it the block which will allow us to display the value of the temperature.</p>
+<p>For displaying the temperature, we will use the block <img alt="shownumber" src="_images/15.png" /> from the category <img alt="Basic" src="_images/s2.png" />.</p>
+<p>After connecting these two blocks, we will select the block <img alt="temperatura" src="_images/s55.png" /> from the Input category, which we will drag into the input field of the show number command. The block <img alt="temperatura" src="_images/s55.png" /> stores the value received from reading the temperature sensor, which is displayed in degrees Celsius.</p>
+<p>The final look of the program:</p>
+<img alt="_images/p10.png" class="align-center" src="_images/p10.png" />
+<p>We will use the simulator to test the program. The program will run after the <img alt="play" src="_images/p3.png" /> button is clicked.</p>
+
+            <div class="course-box course-box-question course-content">
+            <ul data-component="multiplechoice" data-multipleanswers="false"  id="L2Z2">
+            <p>Q-3: What will be the trigger for displaying the light level:</p>
+<img alt="_images/p11.png" class="align-center" src="_images/p11.png" />
+<p>Little help: The block <img alt="level" src="_images/s54.png" /> stores the value received from the light sensor located on the display (LEDs play the role of the light sensor).</p>
+
+            <li data-component="answer" data-correct id="L2Z2_opt_a">When button A is pressed, the value of the light level will be displayed.</li><li data-component="feedback" id="L2Z2_opt_a">Bravo! Pressing button A will display the value of the light level.</li>
+            
+            <li data-component="answer"  id="L2Z2_opt_b">When button B is pressed, the value of the light level will be displayed.</li><li data-component="feedback" id="L2Z2_opt_b">The answer is not correct! Pressing button A will display the value of the light level.</li>
+            
+            <li data-component="answer"  id="L2Z2_opt_c">When A and B are pressed at the same time, the value of the light level will be displayed.</li><li data-component="feedback" id="L2Z2_opt_c">The answer is not correct! Pressing button A will display the value of the light level.</li>
+            
+
+            </ul>
+            </div>
+            
+            <div class="course-box course-box-question course-content">
+            <ul data-component="multiplechoice" data-multipleanswers="false"  id="L2Z3">
+            <p>Q-4: Look carefully at the blocks. Which of the blocks represents a program that will draw a flower when a movement is made (shake)?</p>
+<img alt="_images/p16.png" class="align-center" src="_images/p16.png" />
+
+            <li data-component="answer"  id="L2Z3_opt_a">Block A.</li><li data-component="feedback" id="L2Z3_opt_a">The answer is not correct!</li>
+            
+            <li data-component="answer"  id="L2Z3_opt_b">Block B.</li><li data-component="feedback" id="L2Z3_opt_b">The answer is not correct!</li>
+            
+            <li data-component="answer" data-correct id="L2Z3_opt_c">Block C.</li><li data-component="feedback" id="L2Z3_opt_c">The answer is correct.</li>
+            
+            <li data-component="answer"  id="L2Z3_opt_d">Block D.</li><li data-component="feedback" id="L2Z3_opt_d">The answer is not correct!</li>
+            
+
+            </ul>
+            </div>
+            
+            <div class="course-box course-box-question course-content">
+            <ul data-component="multiplechoice" data-multipleanswers="false"  id="L2Z4">
+            <p>Q-5: Look carefully at the block. What will be the trigger (input) for displaying the direction of the placement of the device:</p>
+<img alt="_images/p17.png" class="align-center" src="_images/p17.png" />
+
+            <li data-component="answer"  id="L2Z4_opt_a">When button A is pressed, the direction will be displayed.</li><li data-component="feedback" id="L2Z4_opt_a">The answer is not correct!</li>
+            
+            <li data-component="answer"  id="L2Z4_opt_b">When button B is pressed, the direction will be displayed.</li><li data-component="feedback" id="L2Z4_opt_b">The answer is not correct!</li>
+            
+            <li data-component="answer" data-correct id="L2Z4_opt_c">When A and B are pressed at the same time, the direction will be displayed.</li><li data-component="feedback" id="L2Z4_opt_c">The answer is correct.</li>
+            
+
+            </ul>
+            </div>
+            <p><strong>Task.</strong> Create a program, which should display a Smiley face (by using <a class="reference internal" href="_images/s12.png"><img alt="showleds" src="_images/s12.png" style="width: 100px;" /></a>) when button A is pressed, when button B is pressed it should show your names, and when A and B are pressed together, it should display how old you are.</p>
+<p>You can compare your solution with ours: <a class="reference external" href="https://makecode.microbit.org/_86uV0j7mt0hU">https://makecode.microbit.org/_86uV0j7mt0hU</a></p>
+</div>
+
+
+  
+      <div class="col-md-12">
+<ul class="pager">
+        <li id="relations-prev" title='Previous chapter - Blocks from the Basic Category' data-toggle="tooltip"><a href="Blocks from the Basic Category.html">Previous chapter</a></li>
+    
+        <li id="relations-next" title='Next chapter - Working with Blocks from the Led Category' data-toggle="tooltip"><a href="Working with Blocks from the Led Category.html">Next chapter</a></li>
+</ul>
+
+<!-- <ul class="pager"> -->
+    <!-- -->
+        <!-- <li id="relations-prev" title='Претходно поглавље - Blocks from the Basic Category' data-toggle="tooltip"><a href="Blocks from the Basic Category.html">Претходно поглавље</a></li> -->
+    <!--  -->
+    <!-- -->
+        <!-- <li id="relations-next" title='Следеће поглавље - Working with Blocks from the Led Category' data-toggle="tooltip"><a href="Working with Blocks from the Led Category.html">Следеће поглавље</a></li> -->
+    <!-- -->
+<!-- </ul> -->
+
+<script type="text/javascript">
+
+  $('#relations-prev').tooltip({'placement':'right', 'selector': '', 'delay': { show: 100, hide: 50}});
+  $('#relations-next').tooltip({'placement':'left', 'selector': '', 'delay': { show: 100, hide: 50}});
+
+</script>
+</div>
+  
+</div>
+<footer class="footer col-md-12">
+    <div class="container">
+        <div class="text-center">
+            <hr>
+            <p class="text-muted">
+                <span class="text-center">&copy; 2019 <a href="https://petlja.org">Petlja.org</a> 
+                  <a rel="license" href="http://creativecommons.org/licenses/by-nc-sa/4.0/"><img alt="Creative Commons License" style="border-width:0; vertical-align: text-bottom" src="https://i.creativecommons.org/l/by-nc-sa/4.0/80x15.png" /></a>
+                  
+                  (Created using  <a href="https://pypi.org/project/Sphinx/">Sphinx</a>, <a href="http://runestoneinteractive.org/">RunestoneComponents</a> and <a href="https://github.com/Petlja/PetljaDoc">PetljaDoc</a>)</span>
+            </p>
+        </div>
+    </div>
+</footer>
+
+
+
+<script type="text/javascript">
+  var _gaq = _gaq || [];
+  _gaq.push(['_setAccount', 'UA-32029811-1']);
+  _gaq.push(['_trackPageview']);
+
+  (function() {
+    var ga = document.createElement('script'); ga.type = 'text/javascript'; ga.async = true;
+    ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js';
+    var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s);
+  })();
+</script>
+
+
+
+  </body>
+</html>

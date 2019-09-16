@@ -1,0 +1,412 @@
+<!DOCTYPE html>
+
+<html xmlns="http://www.w3.org/1999/xhtml" lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <title>EV3 – Basic Characteristics and Components &#8212; Block-based programming in MakeCode</title>
+    <link rel="stylesheet" href="_static/basic.css" type="text/css" />
+    <link rel="stylesheet" href="_static/pygments.css" type="text/css" />
+    <link rel="stylesheet" type="text/css" href="_static/activecode.css" />
+    <link rel="stylesheet" type="text/css" href="_static/codemirror.css" />
+    <link rel="stylesheet" type="text/css" href="_static/clickable.css" />
+    <link rel="stylesheet" type="text/css" href="_static/pytutor.css" />
+    <link rel="stylesheet" type="text/css" href="_static/modal-basic.css" />
+    <link rel="stylesheet" type="text/css" href="_static/datafile.css" />
+    <link rel="stylesheet" type="text/css" href="_static/dragndrop.css" />
+    <link rel="stylesheet" type="text/css" href="_static/fitb.css" />
+    <link rel="stylesheet" type="text/css" href="_static/matrixeq.css" />
+    <link rel="stylesheet" type="text/css" href="_static/parsons.css" />
+    <link rel="stylesheet" type="text/css" href="_static/lib/prettify.css" />
+    <link rel="stylesheet" type="text/css" href="_static/poll.css" />
+    <link rel="stylesheet" type="text/css" href="_static/showEval.css" />
+    <link rel="stylesheet" type="text/css" href="_static/tabbedstuff.css" />
+    <link rel="stylesheet" type="text/css" href="https://stackpath.bootstrapcdn.com/bootstrap/4.2.1/css/bootstrap.min.css" />
+    <link rel="stylesheet" type="text/css" href="_static/video.css" />
+    <link rel="stylesheet" type="text/css" href="_static/karel.css" />
+    <link rel="stylesheet" type="text/css" href="_static/notes.css" />
+    <link rel="stylesheet" href="_static/user-highlights.css" type="text/css" />
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.1.1/css/all.css" type="text/css" />
+    <link rel="stylesheet" href="_static/bootstrap-4.0.0-dist/css/bootstrap.min.css" type="text/css" />
+    <link rel="stylesheet" href="_static/flatly.min.css" type="text/css" />
+    <link rel="stylesheet" href="_static/petlja.css" type="text/css" />
+    <script type="text/javascript" id="documentation_options" data-url_root="./" src="_static/documentation_options.js"></script>
+    <script type="text/javascript" src="_static/runestonebase.js"></script>
+    <script type="text/javascript" src="_static/jquery.js"></script>
+    <script type="text/javascript" src="_static/underscore.js"></script>
+    <script type="text/javascript" src="_static/doctools.js"></script>
+    <script type="text/javascript" src="_static/language_data.js"></script>
+    <script type="text/javascript" src="_static/jquery.highlight.js"></script>
+    <script type="text/javascript" src="_static/bookfuncs.js"></script>
+    <script type="text/javascript" src="_static/codemirror.js"></script>
+    <script type="text/javascript" src="_static/xml.js"></script>
+    <script type="text/javascript" src="_static/css.js"></script>
+    <script type="text/javascript" src="_static/python.js"></script>
+    <script type="text/javascript" src="_static/htmlmixed.js"></script>
+    <script type="text/javascript" src="_static/javascript.js"></script>
+    <script type="text/javascript" src="_static/jquery_i18n/CLDRPluralRuleParser.js"></script>
+    <script type="text/javascript" src="_static/jquery_i18n/jquery.i18n.js"></script>
+    <script type="text/javascript" src="_static/jquery_i18n/jquery.i18n.messagestore.js"></script>
+    <script type="text/javascript" src="_static/jquery_i18n/jquery.i18n.fallbacks.js"></script>
+    <script type="text/javascript" src="_static/jquery_i18n/jquery.i18n.language.js"></script>
+    <script type="text/javascript" src="_static/jquery_i18n/jquery.i18n.parser.js"></script>
+    <script type="text/javascript" src="_static/jquery_i18n/jquery.i18n.emitter.js"></script>
+    <script type="text/javascript" src="_static/jquery_i18n/jquery.i18n.emitter.bidi.js"></script>
+    <script type="text/javascript" src="_static/activecode-i18n.en.js"></script>
+    <script type="text/javascript" src="_static/skulpt.min.js"></script>
+    <script type="text/javascript" src="_static/skulpt-stdlib.js"></script>
+    <script type="text/javascript" src="_static/activecode.js"></script>
+    <script type="text/javascript" src="_static/clike.js"></script>
+    <script type="text/javascript" src="_static/timed_activecode.js"></script>
+    <script type="text/javascript" src="_static/animationbase.js"></script>
+    <script type="text/javascript" src="_static/mchoice.js"></script>
+    <script type="text/javascript" src="_static/timedmc.js"></script>
+    <script type="text/javascript" src="_static/timed.js"></script>
+    <script type="text/javascript" src="_static/mchoice-i18n.en.js"></script>
+    <script type="text/javascript" src="_static/clickable.js"></script>
+    <script type="text/javascript" src="_static/timedclickable.js"></script>
+    <script type="text/javascript" src="_static/d3.v2.min.js"></script>
+    <script type="text/javascript" src="_static/jquery.ba-bbq.min.js"></script>
+    <script type="text/javascript" src="_static/jquery.jsPlumb-1.3.10-all-min.js"></script>
+    <script type="text/javascript" src="_static/pytutor.js"></script>
+    <script type="text/javascript" src="_static/codelens.js"></script>
+    <script type="text/javascript" src="_static/datafile.js"></script>
+    <script type="text/javascript" src="_static/dragndrop.js"></script>
+    <script type="text/javascript" src="_static/timeddnd.js"></script>
+    <script type="text/javascript" src="_static/dragndrop-i18n.en.js"></script>
+    <script type="text/javascript" src="_static/fitb.js"></script>
+    <script type="text/javascript" src="_static/timedfitb.js"></script>
+    <script type="text/javascript" src="_static/fitb-i18n.en.js"></script>
+    <script type="text/javascript" src="_static/matrixeq.js"></script>
+    <script type="text/javascript" src="_static/lib/prettify.js"></script>
+    <script type="text/javascript" src="_static/lib/hammer.min.js"></script>
+    <script type="text/javascript" src="_static/parsons.js"></script>
+    <script type="text/javascript" src="_static/parsons-i18n.en.js"></script>
+    <script type="text/javascript" src="_static/timedparsons.js"></script>
+    <script type="text/javascript" src="_static/poll.js"></script>
+    <script type="text/javascript" src="_static/reveal.js"></script>
+    <script type="text/javascript" src="_static/shortanswer.js"></script>
+    <script type="text/javascript" src="_static/timed_shortanswer.js"></script>
+    <script type="text/javascript" src="_static/showEval.js"></script>
+    <script type="text/javascript" src="_static/tabbedstuff.js"></script>
+    <script type="text/javascript" src="_static/runestonevideo.js"></script>
+    <script type="text/javascript" src="_static/karelCorner.js"></script>
+    <script type="text/javascript" src="_static/karelRobot.js"></script>
+    <script type="text/javascript" src="_static/karelWorld.js"></script>
+    <script type="text/javascript" src="_static/karelRobotDrawer.js"></script>
+    <script type="text/javascript" src="_static/karelUI.js"></script>
+    <script type="text/javascript" src="_static/karel.js"></script>
+    <script type="text/javascript" src="_static/karel-i18n.en.js"></script>
+    <script type="text/javascript" src="_static/notes.js"></script>
+    <script type="text/javascript" src="_static/pygamelib-init.js"></script>
+    <script type="text/javascript" src="_static/blockly/blockly_compressed.js"></script>
+    <script type="text/javascript" src="_static/blockly/blocks_compressed.js"></script>
+    <script type="text/javascript" src="_static/blockly/python_compressed.js"></script>
+    <script type="text/javascript" src="_static/blockly/msg-sr.js"></script>
+    <script type="text/javascript" src="_static/blockpy/utilities.js"></script>
+    <script type="text/javascript" src="_static/blockpy/python_errors.js"></script>
+    <script type="text/javascript" src="_static/blockpy/ast_node_visitor.js"></script>
+    <script type="text/javascript" src="_static/blockpy/abstract_interpreter.js"></script>
+    <script type="text/javascript" src="_static/blockpy/pytifa.js"></script>
+    <script type="text/javascript" src="_static/blockpy/abstract_interpreter_definitions.js"></script>
+    <script type="text/javascript" src="_static/blockpy/python_to_blockly.js"></script>
+    <script type="text/javascript" src="_static/blockpy/imported.js"></script>
+    <script type="text/javascript" src="_static/blockpy/blocks/class.js"></script>
+    <script type="text/javascript" src="_static/blockpy/blocks/comment.js"></script>
+    <script type="text/javascript" src="_static/blockpy/blocks/comprehensions.js"></script>
+    <script type="text/javascript" src="_static/blockpy/blocks/dict.js"></script>
+    <script type="text/javascript" src="_static/blockpy/blocks/if.js"></script>
+    <script type="text/javascript" src="_static/blockpy/blocks/io.js"></script>
+    <script type="text/javascript" src="_static/blockpy/blocks/lists.js"></script>
+    <script type="text/javascript" src="_static/blockpy/blocks/sets.js"></script>
+    <script type="text/javascript" src="_static/blockpy/blocks/loops.js"></script>
+    <script type="text/javascript" src="_static/blockpy/blocks/parking.js"></script>
+    <script type="text/javascript" src="_static/blockpy/blocks/tuple.js"></script>
+    <script type="text/javascript" src="_static/blockpy/blocks/turtles.js"></script>
+    <script type="text/javascript" src="_static/blockpy/blocks/text.js"></script>
+    <script type="text/javascript" src="_static/blockpy-modal.js"></script>
+    <script type="text/javascript" src="_static/jquery-ui-1.10.3.custom.min.js"></script>
+    <script type="text/javascript" src="_static/jquery-fix.js"></script>
+    <script type="text/javascript" src="_static/bootstrap-4.0.0-dist/js/bootstrap.min.js"></script>
+    <script type="text/javascript" src="_static/bootstrap-4.0.0-dist/js/bootstrap.bundle.min.js"></script>
+    <script type="text/javascript" src="_static/bootstrap-sphinx.js"></script>
+    <script type="text/javascript" src="_static/waypoints.min.js"></script>
+    <script type="text/javascript" src="_static/rangy-core.js"></script>
+    <script type="text/javascript" src="_static/rangy-textrange.js"></script>
+    <script type="text/javascript" src="_static/rangy-cssclassapplier.js"></script>
+    <script type="text/javascript" src="_static/user-highlights.js"></script>
+    <script type="text/javascript" src="_static/jquery.idle-timer.js"></script>
+    <script type="text/javascript" src="_static/processing-1.4.1.min.js"></script>
+    <script type="text/javascript" src="_static/jquery.hotkey.js"></script>
+    <script type="text/javascript" src="_static/jquery-migrate-1.2.1.min.js"></script>
+    <link rel="index" title="Index" href="genindex.html" />
+    <link rel="search" title="Search" href="search.html" />
+    <link rel="next" title="Project Task - Robot Movement" href="Project Task - Robot movement.html" />
+    <link rel="prev" title="Project Task - the Wire" href="Project Task - the Wire.html" />
+<meta charset='utf-8'>
+<meta http-equiv='X-UA-Compatible' content='IE=edge,chrome=1'>
+<meta content='width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0' name='viewport' />
+<link rel="shortcut icon" href="_static/favicon.ico" type="image/ico" />
+
+<script type="text/javascript">
+  eBookConfig = {};
+  eBookConfig.host = 'http://127.0.0.1:8000' ? 'http://127.0.0.1:8000' : 'http://127.0.0.1:8000';
+  eBookConfig.app = eBookConfig.host+'/runestone';
+  eBookConfig.ajaxURL = eBookConfig.app+'/ajax/';
+  eBookConfig.course = 'MakeCode';
+  eBookConfig.logLevel = 0;
+  eBookConfig.loginRequired = false;
+  eBookConfig.build_info = "";
+  eBookConfig.isLoggedIn = false;
+  eBookConfig.useRunestoneServices = false;
+  eBookConfig.python3 = false;
+  eBookConfig.basecourse = 'MakeCode';
+  eBookConfig.runestone_version = '3.1.1';
+  eBookConfig.imagesDir = '_images/';
+  eBookConfig.staticDir = '_static/';
+  if(typeof(Sk) != "undefined")
+      Sk.imgPath = eBookConfig.imagesDir;
+</script>
+
+<div id="fb-root"></div>
+
+
+
+  </head><body>
+
+
+<!-- Begin navbar -->
+
+<nav id="navbar" class="navbar navbar-default navbar-fixed-top" role="navigation">
+
+  <div class="container">
+
+    <div class="navbar-header">
+      <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1">
+        <span class="sr-only">Toggle navigation</span>
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+      </button>
+     <img src="_static/img/logo.png" style="width:80px; height: 80px;"> 
+    </div>
+
+    <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1" style="margin-top: 10px; margin-left: 25px;">
+      <ul class="nav navbar-nav">
+        <li class="active"><a href="./">Block-based programming in MakeCode</a></li>
+      </ul>
+    </div>
+  </div>
+</nav>
+
+
+<div class="container col-md-12" id="continue-reading"></div>
+
+<div class="container col-md-8 col-md-offset-2" id="main-content">
+  
+  <div class="section" id="ev3-basic-characteristics-and-components">
+<h1>EV3 – Basic Characteristics and Components<a class="headerlink" href="#ev3-basic-characteristics-and-components" title="Permalink to this headline">¶</a></h1>
+<p>Before we start talking about programming Mindstorm Lego EV3 robots by using the MakeCode online platform, let us first learn about the basic characteristics of the EV3 robots and the MakeCode interface.</p>
+<div class="section" id="the-basics-of-lego-ev3-robots-hardware">
+<h2>The Basics of LEGO EV3 Robots - hardware<a class="headerlink" href="#the-basics-of-lego-ev3-robots-hardware" title="Permalink to this headline">¶</a></h2>
+<p>The LEGO Mindstorms EV3 set is composed of a variety of mechanical and electrical parts from which robots of various shapes and purposes can be assembled.</p>
+<a class="reference internal image-reference" href="_images/setEV3.jpg"><img alt="_images/setEV3.jpg" class="align-center" src="_images/setEV3.jpg" style="width: 600px;" /></a>
+<p>A robot needs have sensors, which collect information from its environment (the robot’s senses), a processor which analyzes this information, i.e. thinks (the robot’s brain), mechanical parts that move and perform a certain activity, as well as a power source, which provides the energy for specific parts of the robot and breathes life into it.</p>
+<p>The main parts of the robot are:</p>
+<ul class="simple">
+<li><p>Control unit</p></li>
+<li><p>Power source</p></li>
+<li><p>Ports</p></li>
+<li><p>Servo Motors</p></li>
+<li><p>Sensors</p></li>
+</ul>
+<p><strong>Control Unit (EV3 Brick)</strong></p>
+<p>At first glance, it becomes obvious that the central part of the robot is occupied by the square EV3 unit where the processor is located.
+It is connected to the sensors, from which it receives and processes information, via cable and ports. Based on the parameters that we set in programs we create, it can send control signals to mechanical parts, i.e. motors, and it can also issue certain audible warnings. The communication between the computer and the control unit is established either via Bluetooth or a USB cable.</p>
+<p>In fact, the robot’s operation is controlled by two programmable AVR microcontrollers. These are devices that, in addition to the processor, contain some peripherals, such as memory, timers, A/D converters, so they can be programmed several times.</p>
+<p>Of course, this integration is done at the expense of memory reduction over the standard computer processor, so programs have to be deleted frequently in order for the user to download new ones.</p>
+<p>The following figure shows the control unit along with the screen through which we control the operations performed on the robot.</p>
+<img alt="_images/brick1.png" class="align-center" src="_images/brick1.png" />
+<img alt="_images/brick2.png" class="align-center" src="_images/brick2.png" />
+<p>To turn on the EV3 Brick, the user needs to press the button in the center. When the button is pressed, the cube light will be red, and the home screen will appear.</p>
+<p>When the light changes to green, the EV3 Brick is ready to go. To turn off the EV3 cube, you need to press the back button until the power off screen appears. By clicking on the confirmation sign and pressing the button in the center, the EV3 cube will shut down. In case you select the X option, you will return to the Run Recent screen.</p>
+<p><strong>Power Source</strong></p>
+<p>Like any electro-mechanical construction, the LEGO Mindstorms EV3 robot requires power. The standard LEGO robot power supply is composed of 6 AA 1.5V batteries. Electric motors are powered by 9V, and one of the microcontrollers and some of the integrated circuits are powered by 5V. The main microcontroller is powered by 3.3V. The output ports are powered by 4.3V and have overcurrent protection.</p>
+<p>Newer versions of the robot have rechargeable batteries like mobile phones. Energy can be obtained from solar cells that the robot can carry, as well as from the city grid if the robot doesn’t move.</p>
+<p><strong>Ports</strong></p>
+<p>We have already mentioned that the control unit receives data from the environment through sensors, processes them, and then transmits corresponding control signals to the motors. Communication with peripheral devices is done through ports.</p>
+<p>According to the data direction, the ports can be divided into input and output ports. There are 4 ports each.</p>
+<img alt="_images/brick3.png" class="align-center" src="_images/brick3.png" />
+<p>The output unit is composed of motors, and the input unit is composed of sensors. Unless the user changes something while writing the program, by default the output ports are divided and used as follows:</p>
+<ul class="simple">
+<li><p>port A for medium motors</p></li>
+<li><p>port B and C for two combined large motors</p></li>
+<li><p>port D for one large motor</p></li>
+</ul>
+<p>Also, unless the user defines otherwise, by default the input ports are assigned as follows:</p>
+<ul class="simple">
+<li><p>port 1 for the touch sensor</p></li>
+<li><p>port 2 for the temperature sensor or the gyro sensor (gyroscope)</p></li>
+<li><p>port 3 for the color sensor (lighting)</p></li>
+<li><p>port 4 for the detection of infrared light or ultrasonic sensor</p></li>
+</ul>
+<p><strong>Motors</strong></p>
+<p>Any kind of movement made by the robot would be unimaginable without the motors. Most often, there are three servo motors available, these motors receive electrical signals through their ports, which enable them to function.
+Servo motors are most commonly used when small forces have to be overcome, such as opening small doors, carrying loads of small dimensions over short distances, and the like. That is why they are mostly used for making small robots, robotic arms and other manipulators. Servo motors do not require a strong power supply, they are easy to control, and they are reliable.</p>
+<a class="reference internal image-reference" href="_images/brick4.png"><img alt="_images/brick4.png" class="align-center" src="_images/brick4.png" style="width: 350px;" /></a>
+<p>The basis of a servo motor is actually a one-way motor with a certain number of gears, and their operation is based on the principle of pulse width modulation - PWM. The microcontroller processes the data on the PWM signal fill factor (number from 0 to 100, and from 0 to -100), and based on that number the duration percentage of the PWM signal is determined.</p>
+<p>Positive numbers refer to moving forward and negative to moving backwards. In addition to the obvious size difference, motors vary in the number of RPM (rotations per minute). The larger engine is slower but provides more power.</p>
+<p>The medium motor is faster and more stable. It contains tachographs, which provide information about the number of rotations and various other useful data.</p>
+<a class="reference internal image-reference" href="_images/brick5.png"><img alt="_images/brick5.png" class="align-center" src="_images/brick5.png" style="width: 300px;" /></a>
+<p>With the proper construction layout and program usability, you can create different mechanisms for movement with which the robot can move by using wheels and caterpillars; it can jump like a frog, move like a scorpion, as well as catch and push objects, and place them in specific spots.</p>
+<p><strong>Sensors</strong></p>
+<p>Like humans, robots need senses to analyze their environment.</p>
+<p>The standard LEGO robot has four types of sensors:</p>
+<ul class="simple">
+<li><p>ultrasonic (the one that looks like eyes), which is used to determine the distance between the robot and an obstacle,</p></li>
+<li><p>optical (color sensor), which, as it is implied by the name, reacts to the light level in its environment, i.e. detects the color as a value of the electromagnetic spectrum,</p></li>
+<li><p>sound sensor, which reacts to the sound level in its environment; touch sensor, which, you guessed it, reacts to touch, i.e. to the button being pressed,</p></li>
+<li><p>gyro sensor (gyroscope), measures the object’s (robot’s) rotational motion and changes in its orientation.</p></li>
+</ul>
+<p><strong>Ultrasonic Sensor</strong></p>
+<p>This is a digital sensor, which measures the distance to an object.</p>
+<p>In addition to the ultrasound receiver, which is a kind of a special microphone, this sensor also has an ultrasound transmitter. The transmitter sends an ultrasonic wave that bounces off the obstacle and reflects back to the robot. This returning wave is picked up by the receiver, which is the actual sensor. The robot calculates the distance to an obstacle by measuring the time elapsed from the moment the ultrasonic wave was emitted until the echo of this wave, which has reflected back from an object, came back.</p>
+<a class="reference internal image-reference" href="_images/brick6.jpg"><img alt="_images/brick6.jpg" class="align-center" src="_images/brick6.jpg" style="width: 250px;" /></a>
+<p>The distance can be measured in inches or centimeters. When the centimeter sale is used, the measurable distance is between 3 and 250cm, with the accuracy of +/- 1cm. When inches are used, the measurable distance is between 1 and 99 inches, with the accuracy of +/- 0.394 inches).
+The speed of the ultrasound is about 300 m/s, and the sound wave travels from the transmitter to the obstacle and back, crossing the distance that is double the distance from the robot to the obstacle. The processor just needs to use the formula s=v*t, to calculate the distance from the obstacle.</p>
+<img alt="_images/brick7.png" class="align-center" src="_images/brick7.png" />
+<p>For a more accurate measurement, other aspects have to be taken into account, like the fact that the speed of the ultrasound in the air depends on the ambient temperature and on the frequency of ultrasound emitted by the transmitter associated with the sensor.
+It is not difficult to see that this feature reminds us of a bat that, although with a scarce sense of sight, is unmistakably orientated in space thanks to its echo locators.</p>
+<p><strong>Optical Sensor</strong></p>
+<p>The Color Sensor is a digital sensor that can detect the color or intensity of light that enters through the small window on the face of the sensor. It reads 1 kHz/sec.</p>
+<a class="reference internal image-reference" href="_images/brick8.png"><img alt="_images/brick8.png" class="align-center" src="_images/brick8.png" style="width: 250px;" /></a>
+<p>This sensor reacts to light or changes in ambient light. Previously, the sensors were black and white, and they could recognize some shades of grey. Nowadays, sensors are more complex and they can recognize color, i.e. the level in the electromagnetic spectrum. This is why they are often referred to as color sensors.
+Human beings (unlike animals) have a developed sense of sight thanks to a highly developed brain, which is able to receive and process a large amount of information, which results in image recognition.</p>
+<p>The sensor can be used for:</p>
+<ol class="arabic simple">
+<li><p>Reading colors: the robot recognizes seven colors (black, blue, green, yellow, red, white, brown and plus no color). For example, the robot can be programmed to sort colored blocks, say the names of colors it recognizes, or stop action when it recognizes red.</p></li>
+<li><p>Reflecting light: the robot uses a lamp to emit red light and measures the intensity of light reflected off the object. It uses a scale from 0 (very dark) to 100 (very light). For example, the robot can be programmed to move around on the white surface until it comes across a black surface.</p></li>
+<li><p>Ambient light (environment): the robot measures the strength of light received from the environment, for example, the light coming from a lamp. It uses the same scale as in the second option. For example, the robot can be programmed to set off a wake-up alarm when the Sun rises.</p></li>
+</ol>
+<p>There are clear limitations when it comes to sensors, i.e. robots; therefore, orienting in space based on images in the form of a large number of dots is difficult. That is why this sensor, and the communication through it, is a big challenge for constructors.</p>
+<p><strong>Touch Sensor</strong></p>
+<a class="reference internal image-reference" href="_images/brick9.png"><img alt="_images/brick9.png" class="align-center" src="_images/brick9.png" style="width: 250px;" /></a>
+<p>This is actually a switch, which has two conditions:</p>
+<ul class="simple">
+<li><p>pressed (when the robot touches an obstacle) or</p></li>
+<li><p>released (when the sensor is not touching any object).</p></li>
+</ul>
+<p><strong>Gyroscope</strong></p>
+<p>Gyroscope is a digital sensor, which detects movement and changes in the movement of the robot. When the robot moves, this sensor will present this as the change in the rotation speed in degrees per second (deg/s). The maximum rate is 440 deg/s.</p>
+<a class="reference internal image-reference" href="_images/brick10.png"><img alt="_images/brick10.png" class="align-center" src="_images/brick10.png" style="width: 300px;" /></a>
+<p>Based on this data, the user can determine whether the robot is turning, and also to program these turns (with the accuracy of +/- 3 degrees for a 90-degree turn).
+In order for the sensor to produce accurate results, it is necessary to keep the robot motionless before turning it on, so the sensor can properly calibrate.</p>
+<p>Apart from the ones mentioned above, there are other types of sensors available, such as sound sensor, temperature sensor, infrared sensor, etc.</p>
+<p><strong>The Main Menu of the EV3</strong></p>
+<p>EV3 Brick contains four basic screens, which give you access to a wide range of functions unique to the EV3 Brick (from something as simple as starting and stopping a program, to writing the program itself).</p>
+<p><strong>Run Recent</strong></p>
+<p>A list of downloaded and running programs will be displayed on this screen. The program at the top of the list is the program that was last used.</p>
+<p><strong>File Navigation</strong></p>
+<p>From this screen, the user can access and manage all files on EV3 Brick, including files stored on SD cards.</p>
+<p><strong>Applications</strong></p>
+<p>EV3 Brick comes with four applications. Apart from that, the user can create his/her own applications by using the EV3 Software.</p>
+<p><strong>Port View</strong></p>
+<p>On the first screen on the Port View, the user can see which ports have sensors and motors attached, that is, which ports are occupied. By using the EV3 Brick navigation buttons, the user can check which ports are occupied and see the current readings from the sensors and motors.</p>
+<p><strong>Motor Control</strong></p>
+<p>The user can control the movement of any motor connected to one of four output ports.</p>
+<p><strong>IR Control (Infrared control)</strong></p>
+<p>Controls the movement of any motor connected to one of the four output ports by using the “remote control” - Remote Infrared Beacon, and the “receiver” - Infrared Sensor.</p>
+<p><strong>Brick Program</strong></p>
+<p>EV3 Brick comes with an on-brick application similar to a software that would be installed on a computer. This way simple programs can be created, which is why it is suitable for beginners. Another reason is that the user can create and test programs on the robot itself without using a computer.</p>
+<p><strong>Brick Dialog</strong></p>
+<p>Reading the values of sensors and motors. If sensors and motors are connected to the brick, a graph will show current readings from one of the sensors or motors, similar to an oscilloscope.</p>
+<p><strong>Settings</strong></p>
+<p>This screen enables the access to various general settings on the EV3 Brick, such as the volume of the sound, establishing Bluetooth or Wi-Fi connections, visibility or technical specifications for the EV3 Brick itself. Screen and volume settings, as well as sleep settings, i.e. inactive time that passes before the unit goes into sleep mode.</p>
+</div>
+<div class="section" id="interface-software">
+<h2>Interface – Software<a class="headerlink" href="#interface-software" title="Permalink to this headline">¶</a></h2>
+<p>For more demanding applications, more advanced programs and development environments are used, which offer great opportunities for program creation. Due to their increasing popularity and application, programmers have developed (and are still developing) multiple classes in popular programming languages ​​like C#, MatLab, and others, specifically for creating applications which control LEGO robots. It is up to the users to choose whether they will stack blocks or write a program as a series of instructions in one of the programming languages.</p>
+<p>In this part of the course, we will address the possibilities MakeCode development platform. In this programming interface, you can create simple programs like “Go right for 5 seconds and stop”, and you can also let your imagination run wild and create more complex programs by involving different sensors and motors.</p>
+<p>When we access the MakeCode programming interface (<a class="reference external" href="https://makecode.mindstorms.com/">https://makecode.mindstorms.com/</a>),</p>
+<img alt="_images/2.png" class="align-center" src="_images/2.png" />
+<p>as with most programs, we notice that we are expected to create a new project (<a class="reference internal" href="_images/3.png"><img alt="Project" src="_images/3.png" style="width: 80px;" /></a>) or to open an already existing program. To learn more about the EV3 programming interface, and to learn how to create the first program, you can use the Getting Started options or watch various Tutorials.</p>
+<p>By clicking on the button <a class="reference internal" href="_images/3.png"><img alt="Project" src="_images/3.png" style="width: 80px;" /></a> or by opening one of the existing projects, you can access the programming interface, which contains blocks that you can use to control the robots.</p>
+<img alt="_images/4.png" class="align-center" src="_images/4.png" />
+<p>All programming blocks used to control the robot are located in the block palette in the middle of the programming interface. Program blocks are divided into categories by type and purpose. The advantage of this interface is the existence of a robot simulation.</p>
+</div>
+<div class="section" id="projects">
+<h2>Projects<a class="headerlink" href="#projects" title="Permalink to this headline">¶</a></h2>
+<p>In the following tutorials, we will introduce some interesting projects for programming EV3 robots by using the MakeCode platform. All projects are done step by step, so everyone can do them again. All procedures for constructing projects are elaborated, from how the program is created to how it’s tested.</p>
+<blockquote>
+<div><div class="toctree-wrapper compound">
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="Project Task - Robot movement.html">Project Task - Robot Movement</a></li>
+<li class="toctree-l1"><a class="reference internal" href="Project Task - Displaying text and graphics.html">Project Task - Displaying Text and Graphics</a></li>
+<li class="toctree-l1"><a class="reference internal" href="Project Task - Using the sensors.html">Project Task - Using the Sensors</a></li>
+<li class="toctree-l1"><a class="reference internal" href="Project Task - Happy or sad.html">Project Task - Happy or Sad</a></li>
+<li class="toctree-l1"><a class="reference internal" href="Project Task - Forward and backward.html">Project Task - Forward and Backward</a></li>
+<li class="toctree-l1"><a class="reference internal" href="Project Task - Middle button.html">Project Task - Middle Button</a></li>
+</ul>
+</div>
+</div></blockquote>
+</div>
+</div>
+
+
+  
+      <div class="col-md-12">
+<ul class="pager">
+        <li id="relations-prev" title='Previous chapter - Project Task - the Wire' data-toggle="tooltip"><a href="Project Task - the Wire.html">Previous chapter</a></li>
+    
+        <li id="relations-next" title='Next chapter - Project Task - Robot Movement' data-toggle="tooltip"><a href="Project Task - Robot movement.html">Next chapter</a></li>
+</ul>
+
+<!-- <ul class="pager"> -->
+    <!-- -->
+        <!-- <li id="relations-prev" title='Претходно поглавље - Project Task - the Wire' data-toggle="tooltip"><a href="Project Task - the Wire.html">Претходно поглавље</a></li> -->
+    <!--  -->
+    <!-- -->
+        <!-- <li id="relations-next" title='Следеће поглавље - Project Task - Robot Movement' data-toggle="tooltip"><a href="Project Task - Robot movement.html">Следеће поглавље</a></li> -->
+    <!-- -->
+<!-- </ul> -->
+
+<script type="text/javascript">
+
+  $('#relations-prev').tooltip({'placement':'right', 'selector': '', 'delay': { show: 100, hide: 50}});
+  $('#relations-next').tooltip({'placement':'left', 'selector': '', 'delay': { show: 100, hide: 50}});
+
+</script>
+</div>
+  
+</div>
+<footer class="footer col-md-12">
+    <div class="container">
+        <div class="text-center">
+            <hr>
+            <p class="text-muted">
+                <span class="text-center">&copy; 2019 <a href="https://petlja.org">Petlja.org</a> 
+                  <a rel="license" href="http://creativecommons.org/licenses/by-nc-sa/4.0/"><img alt="Creative Commons License" style="border-width:0; vertical-align: text-bottom" src="https://i.creativecommons.org/l/by-nc-sa/4.0/80x15.png" /></a>
+                  
+                  (Created using  <a href="https://pypi.org/project/Sphinx/">Sphinx</a>, <a href="http://runestoneinteractive.org/">RunestoneComponents</a> and <a href="https://github.com/Petlja/PetljaDoc">PetljaDoc</a>)</span>
+            </p>
+        </div>
+    </div>
+</footer>
+
+
+
+<script type="text/javascript">
+  var _gaq = _gaq || [];
+  _gaq.push(['_setAccount', 'UA-32029811-1']);
+  _gaq.push(['_trackPageview']);
+
+  (function() {
+    var ga = document.createElement('script'); ga.type = 'text/javascript'; ga.async = true;
+    ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js';
+    var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s);
+  })();
+</script>
+
+
+
+  </body>
+</html>
