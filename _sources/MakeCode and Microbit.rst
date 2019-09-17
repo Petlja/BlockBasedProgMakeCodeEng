@@ -1,10 +1,10 @@
 Micro:bit – Basic Features and Components
-===============================================
+==========================================
 
 Before we begin the story of Micro:bit programming through MakeCode, let's get acquainted with the basic components and features of Micro:bit and the work environment.
 
 Micro:bit – Basic Features and Components
------------------------------------------------
+:::::::::::::::::::::::::::::::::::::::::
 
 Micro:bit is a portable, user-programmable computer, which has a 32-bit ARM Cortex-M0 processor working on 16MHz with only 16KB RAM memory, as well as sensors and a screen made of 25 LEDs. It has connectors, five inputs and outputs (I/O) used to connect the Micro:bit to other devices or sensors, it also has Bluetooth, and it is powered by two AA batteries. 
 Most importantly, it has the ability to program.
@@ -163,11 +163,11 @@ Projects
 In the following tutorials, we will introduce some interesting projects related to Micro:bit programming by using the MakeCode platform.
 All projects are done step by step, so everyone can do them again. All procedures for constructing projects are elaborated, from how the device is built to how the program is created and tested.
 
-   .. toctree::
-      :maxdepth: 2
-
-      Project Task - the Bracelet.rst
-      Project Task - the Singing Fruits.rst
-      Project Task - the Traffic Light.rst
-      Project Task - the House Alarm.rst
-      Project Task - the Wire.rst
+.. toctree::
+   :maxdepth: 2
+   
+   Project Task - the Bracelet.rst
+   Project Task - the Singing Fruits.rst
+   Project Task - the Traffic Light.rst
+   Project Task - the House Alarm.rst
+   Project Task - the Wire.rst
