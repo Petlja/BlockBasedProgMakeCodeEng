@@ -197,6 +197,7 @@
     </div>
   </div>
 </nav>
+<br/>
 
 
 <div class="container col-md-12" id="continue-reading"></div>
@@ -206,7 +207,7 @@
   <div class="section" id="project-task-robot-movement">
 <h1>Project Task - Robot Movement<a class="headerlink" href="#project-task-robot-movement" title="Permalink to this headline">¶</a></h1>
 <p>We will begin our adventure with a simple program, which allows the robot to move forward for 2 seconds and then moves backward for 2 seconds.</p>
-<p>The first step in our example is to start the motor. We need to select the block <img alt="tankmotor" src="_images/6.png" /> from the category <img alt="Motors" src="_images/5.png" />, and drag it onto the work surface and into the block <img alt="start" src="_images/8.png" />. Initially, we have to decide to which ports we will connect out motors. We have already mentioned that the EV3 has four ports for motors - A, B, C and D.</p>
+<p>The first step in our example is to start the motor. We need to select the block <img alt="tankmotor" src="_images/6.png" /> from the category <img alt="Motors" src="_images/5.png" />, and drag it onto the work surface and into the block <img alt="start" src="_images/81.png" />. Initially, we have to decide to which ports we will connect out motors. We have already mentioned that the EV3 has four ports for motors - A, B, C and D.</p>
 <p>In our case motors are connected to the ports B and C, and their speed 50%. Since, based on the setup of the task, the robot should move forward for 2 seconds, we need to click on the plus sign on the block <img alt="tankmotor" src="_images/6.png" />, this will give us the option to choose the manner in which the robot will move.</p>
 <p>In our case, we need to choose the option “seconds”.</p>
 <img alt="_images/7.png" class="align-center" src="_images/7.png" />
@@ -220,14 +221,14 @@
 <p>Download the .uf2 file to your computer by clicking the button <a class="reference internal" href="_images/download.png"><img alt="dugme1" src="_images/download.png" style="width: 199px;" /></a>. By dragging the file onto the EV3, it is ready to start working.</p>
 <p>To demonstrate how the robot moves, we will give another simple example of a program, which allows the robot to move from the starting line to the finishing line, and back. The distance to the finish is 50cm.</p>
 <img alt="_images/11_.png" class="align-center" src="_images/11_.png" />
-<p>Based on the setup of the task, the robot is moving forward 5 rotations (360 degreed = 1 rotation), therefore, we need to drag the block <img alt="tankmotor" src="_images/6.png" /> from the category <img alt="Motors" src="_images/5.png" />, onto the work surface and into the block <img alt="start" src="_images/8.png" />.</p>
+<p>Based on the setup of the task, the robot is moving forward 5 rotations (360 degreed = 1 rotation), therefore, we need to drag the block <img alt="tankmotor" src="_images/6.png" /> from the category <img alt="Motors" src="_images/5.png" />, onto the work surface and into the block <img alt="start" src="_images/81.png" />.</p>
 <p>In our case, the motors are connected to the B and C ports at 50% speed. Since, based on the setup of the task, the robot moves 5 rotations, we need to click on the plus sign on the block, which will open the option for choosing the manner in which the robot will move. This time, we need to select the option “rotation”.
 Then, we need to set the duration of the robot’s movement by entering the value 5 in the input field. This way, the robot will move for 5 rotations.</p>
 <p>The part of the code, which allows the robot to move 5 rotations:</p>
-<img alt="_images/12.png" class="align-center" src="_images/12.png" />
-<p>We will use the block to rotate the robot. Turning is defined as the change in the speed of one motor in relation to another motor, or more precisely, if we want to make a quick or sharp turn to the right, the left motor must run at least twice as fast as the right. In order for the robot to make any type of turn, we need to use the input field <code class="docutils literal notranslate"><span class="pre">turn</span> <span class="pre">ratio</span></code>. If we want the robot to turn left, we will set a negative value, and if we want it to turn right, we will set a positive value. To allow the robot to come back from the finishing line to the starting line, we will use the same block. To stop the functioning of all motors we will use the block <img alt="blok1" src="_images/14.png" />.</p>
+<img alt="_images/121.png" class="align-center" src="_images/121.png" />
+<p>We will use the block to rotate the robot. Turning is defined as the change in the speed of one motor in relation to another motor, or more precisely, if we want to make a quick or sharp turn to the right, the left motor must run at least twice as fast as the right. In order for the robot to make any type of turn, we need to use the input field <code class="docutils literal notranslate"><span class="pre">turn</span> <span class="pre">ratio</span></code>. If we want the robot to turn left, we will set a negative value, and if we want it to turn right, we will set a positive value. To allow the robot to come back from the finishing line to the starting line, we will use the same block. To stop the functioning of all motors we will use the block <img alt="blok1" src="_images/141.png" />.</p>
 <p>The look of the code, which allows the robot to move from the starting to the finishing line:</p>
-<img alt="_images/151.png" class="align-center" src="_images/151.png" />
+<img alt="_images/152.png" class="align-center" src="_images/152.png" />
 <p>Download the .uf2 file to your computer by clicking the button <a class="reference internal" href="_images/download.png"><img alt="dugme1" src="_images/download.png" style="width: 199px;" /></a>. By dragging the file onto the EV3, it is ready to start working.</p>
 </div>
 

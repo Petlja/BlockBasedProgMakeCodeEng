@@ -22,4 +22,4 @@ This interactive manual will help you master the basics of programming in the vi
 
     MakeCode and Microbit.rst
     MakeCode and EV3.rst
-      
+    MakeCode and Minecraft.rst  

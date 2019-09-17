@@ -197,6 +197,7 @@
     </div>
   </div>
 </nav>
+<br/>
 
 
 <div class="container col-md-12" id="continue-reading"></div>
@@ -241,7 +242,7 @@ Now, we wish to program mistakes detection, more precisely we want to detect, us
 Based on the physical Wire device, we can conclude that the pin <code class="docutils literal notranslate"><span class="pre">P0</span></code> is the “trigger” for all events.</p>
 <p>Since the <code class="docutils literal notranslate"><span class="pre">P0</span></code> pin is connected via the crocodile clips to the hook, the mistake is detected by touching the main wire and the Micro:bit should display a cross (we are programming mistake detection).</p>
 <p><strong>Step 3</strong></p>
-<p>From the category <img alt="Input" src="_images/s6.png" /> choose the block <img alt="press" src="_images/31.png" /> and from the drop-down list choose pin <code class="docutils literal notranslate"><span class="pre">P0</span></code>.</p>
+<p>From the category <img alt="Input" src="_images/s6.png" /> choose the block <img alt="press" src="_images/310.png" /> and from the drop-down list choose pin <code class="docutils literal notranslate"><span class="pre">P0</span></code>.</p>
 <p>This block will be our “trigger” for the visual display of the mistake.</p>
 <p><strong>Step 4</strong></p>
 <p>Now, we have to add the block displaying the cross sign on the screen, which will appear when the user touches the main wire with the hook.
@@ -251,7 +252,7 @@ Choose the category <img alt="Basic" src="_images/s2.png" /> and the block <img 
 <p>In the code, we will add the block for pause with which we ensure timely system response (Wire device).
 Choose the category <img alt="Basic" src="_images/s2.png" /> and the block <img alt="Pause" src="_images/s39.png" /> where you can set time in milliseconds (1000 milliseconds = 1 second).</p>
 <p>The look of the code:</p>
-<img alt="_images/71.png" class="align-center" src="_images/71.png" />
+<img alt="_images/710.png" class="align-center" src="_images/710.png" />
 <p><strong>Step 5</strong></p>
 <p>The upper part of the code only shows the detection of the mistake that happens when the hook touches the main wire.</p>
 <p>Now, we shall add the part which will count the number of times the user has made a mistake. To fulfill this requirement, we have to find a way to store and, if needed, change the number of mistakes the user makes.
@@ -259,59 +260,59 @@ Solution for this problem is the introduction of the <strong>variable</strong>.<
 <p>A variable can be understood as a space in the computer memory, something like a box, in which, during the execution of the program, we can store some interim values.
 Variables have names. When we want to use the value of the variable, it is enough to use its name.</p>
 <p>A variable is created in the following manner, in the category Variables (1), click on the button Make a variable (2) and type in the name of that variable in the field (3), in our case the name Counter. By clicking the button OK (4), you have created a variable (5).</p>
-<img alt="_images/s29.png" class="align-center" src="_images/s29.png" />
+<img alt="_images/s291.png" class="align-center" src="_images/s291.png" />
 <p><strong>Step 6</strong></p>
 <p>At the start of the “exercise”, the number on the counter will be 0. Setting the starting value (reset to the starting value) will be defined by the user pressing button A. This means that when the user presses the button on the Micro:bit the counter value will be set to zero, and the counting of the mistakes can begin.</p>
-<p>From the category <img alt="Input" src="_images/s6.png" /> choose the block <img alt="Button" src="_images/13.png" />, and from the drop-down list choose button A.</p>
+<p>From the category <img alt="Input" src="_images/s6.png" /> choose the block <img alt="Button" src="_images/131.png" />, and from the drop-down list choose button A.</p>
 <p>This block will be our “trigger” for resetting the variable <strong>Counter</strong>.</p>
-<p>From the <code class="docutils literal notranslate"><span class="pre">Variables</span></code> category drag the block <img alt="set" src="_images/141.png" />.</p>
-<p>We will connect this block to the block above and with the block displaying the value of the variable. (From the category <img alt="Basic" src="_images/s2.png" /> we choose the block <img alt="prikaz" src="_images/15.png" /> into which we will drag the block <img alt="brojac" src="_images/161.png" /> from the <code class="docutils literal notranslate"><span class="pre">Variables</span></code> category, and place it in the space with the number 0 written.
+<p>From the <code class="docutils literal notranslate"><span class="pre">Variables</span></code> category drag the block <img alt="set" src="_images/142.png" />.</p>
+<p>We will connect this block to the block above and with the block displaying the value of the variable. (From the category <img alt="Basic" src="_images/s2.png" /> we choose the block <img alt="prikaz" src="_images/15.png" /> into which we will drag the block <img alt="brojac" src="_images/162.png" /> from the <code class="docutils literal notranslate"><span class="pre">Variables</span></code> category, and place it in the space with the number 0 written.
 This way, we create a block that shows the value of the variable <strong>Counter</strong>.</p>
 <p>Part of the code for resetting and displaying the variable <strong>Counter</strong>:</p>
 <img alt="_images/181.png" class="align-center" src="_images/181.png" />
 <p><strong>Step 7</strong></p>
 <p>We can use the variable <strong>Counter</strong>, whose starting value is set at 0, to count the mistakes. The value of the variable will increase by 1 every time the user makes a mistake, or more specifically, every time the hook touches the main wire.
-For this, we will use the block <img alt="change" src="_images/191.png" /> from the category <code class="docutils literal notranslate"><span class="pre">Variables</span></code>.</p>
+For this, we will use the block <img alt="change" src="_images/192.png" /> from the category <code class="docutils literal notranslate"><span class="pre">Variables</span></code>.</p>
 <p>We will drag this block into the part of the code in which we have detected a mistake by displaying the X sign.</p>
 <p>The look of the code and the running of the code in the simulator:</p>
 <img alt="_images/202122.png" class="align-center" src="_images/202122.png" />
 <p><strong>Step 8</strong></p>
 <p>In our next step, we want to upgrade the project by adding the sound every time the user touches the main wire.</p>
-<p>For this, we will have to make the connection between two Micro:bits, or more precisely to use the option of the radio communication between them. First and foremost, we have to create the group’s ID, which is used to “create” the space in which, in our case, the two Micro:bits will communicate. To create the ID, we will use the block <img alt="radioset" src="_images/231.png" /> from the category <img alt="Radio" src="_images/s21.png" />.  Any number can be chosen. We will leave 1 as the ID of the group. We will then drag this block into the block <img alt="Forever" src="_images/s2.png" /> from the category <img alt="Basic" src="_images/s2.png" />.</p>
+<p>For this, we will have to make the connection between two Micro:bits, or more precisely to use the option of the radio communication between them. First and foremost, we have to create the group’s ID, which is used to “create” the space in which, in our case, the two Micro:bits will communicate. To create the ID, we will use the block <img alt="radioset" src="_images/232.png" /> from the category <img alt="Radio" src="_images/s211.png" />.  Any number can be chosen. We will leave 1 as the ID of the group. We will then drag this block into the block <img alt="Forever" src="_images/s2.png" /> from the category <img alt="Basic" src="_images/s2.png" />.</p>
 <p>Part of the code, which creates the communication group:</p>
 <img alt="_images/241.png" class="align-center" src="_images/241.png" />
 <p>To send a radio signal to another device, which will “react” based on that by emitting the sound when a mistake is made, we have to introduce the following block, into the section of the code that detects and counts mistakes.</p>
 <p>Upgraded code for detecting and counting mistakes:</p>
-<img alt="_images/26.png" class="align-center" src="_images/26.png" />
+<img alt="_images/261.png" class="align-center" src="_images/261.png" />
 <p>The completed code for the first Micro:bit:</p>
-<img alt="_images/271.png" class="align-center" src="_images/271.png" />
-<p>Download the .hex file to your computer by clicking on the button <img alt="dugme1" src="_images/281.png" /> or button <a class="reference internal" href="_images/291.png"><img alt="dugme2" src="_images/291.png" style="width: 199px;" /></a>. The Micro:bit will be ready to start working once you have dragged the file onto it.</p>
+<img alt="_images/272.png" class="align-center" src="_images/272.png" />
+<p>Download the .hex file to your computer by clicking on the button <img alt="dugme1" src="_images/282.png" /> or button <a class="reference internal" href="_images/291.png"><img alt="dugme2" src="_images/291.png" style="width: 199px;" /></a>. The Micro:bit will be ready to start working once you have dragged the file onto it.</p>
 <p><strong>Step 9</strong></p>
 <p>Our next step is to create the program for the other Micro:bit, which will control the sound every time the user makes a mistake.
 Our two Micro:bits should communicate in the space with the ID group 1.</p>
-<p>We drag the block <img alt="radioset" src="_images/231.png" /> from the category <img alt="Radio" src="_images/s21.png" /> into the block <img alt="Forever" src="_images/s2.png" /> from the category <img alt="Basic" src="_images/s2.png" />.</p>
+<p>We drag the block <img alt="radioset" src="_images/232.png" /> from the category <img alt="Radio" src="_images/s211.png" /> into the block <img alt="Forever" src="_images/s2.png" /> from the category <img alt="Basic" src="_images/s2.png" />.</p>
 <p>Part of the code, which creates the communication group:</p>
 <img alt="_images/241.png" class="align-center" src="_images/241.png" />
-<p>Next step is for this Micro:bit to receive the information (in our case a number) based on which it will “react” by emitting a sound. For this, we will drag the following block from the <img alt="Radio" src="_images/s21.png" /> category:</p>
+<p>Next step is for this Micro:bit to receive the information (in our case a number) based on which it will “react” by emitting a sound. For this, we will drag the following block from the <img alt="Radio" src="_images/s211.png" /> category:</p>
 <img alt="_images/301.png" class="align-center" src="_images/301.png" />
 <p>Into this block, we will drag the block <img alt="Play" src="_images/31_.png" />, which reproduces the sound, from the category <img alt="Music" src="_images/s66.png" />.
 From the drop-down list of this block, we will choose the tone and the duration of the tone.</p>
 <img alt="_images/3132.png" class="align-center" src="_images/3132.png" />
 <p>The look of the code, which reproduces the sound:</p>
-<img alt="_images/33.png" class="align-center" src="_images/33.png" />
+<img alt="_images/331.png" class="align-center" src="_images/331.png" />
 <p><strong>Note</strong>: To reproduce the sound, Micro:bit has to be connected to the speakers or to the headphones in the following manner:</p>
 <img alt="_images/34.png" class="align-center" src="_images/34.png" />
 <p>The complete code for the Micro:bit, which has the sound activated:</p>
-<img alt="_images/35.png" class="align-center" src="_images/35.png" />
+<img alt="_images/351.png" class="align-center" src="_images/351.png" />
 <p>In this way, we have created detection, counting and sound of the mistakes made by the user when the main wire is touched.</p>
 <p><strong>Step 10</strong></p>
 <p>To create the device, which will measure how much time the user needs to complete the “exercise” of his motor skills, we have to introduce two additional Micro:bit devices. One will only be a “trigger” starting the clock on the other Micro:bit.</p>
 <p>By clicking button A, the device is reset, and the screen is cleared. The <code class="docutils literal notranslate"><span class="pre">reset</span></code> option is located in the category <code class="docutils literal notranslate"><span class="pre">Advanced</span> <span class="pre">-</span> <span class="pre">Control</span></code>.</p>
 <p>Option for clearing the screen is in the subcategory More of the category <img alt="Basic" src="_images/s2.png" />.</p>
 <p>Part of the code:</p>
-<img alt="_images/37.png" class="align-center" src="_images/37.png" />
+<img alt="_images/371.png" class="align-center" src="_images/371.png" />
 <p>Then we create the space for communication with the ID group 50:</p>
-<img alt="_images/36.png" class="align-center" src="_images/36.png" />
+<img alt="_images/361.png" class="align-center" src="_images/361.png" />
 <p>Pin <code class="docutils literal notranslate"><span class="pre">P1</span></code> is the pin the hook is connected to via the crocodile clips.
 This pin will be used as the time “trigger”. More precisely, the hook touching the wire sends a radio signal, which starts the time. Furthermore, to enable the user to see when the time started, the image <img alt="slika" src="_images/37_.png" /> will be displayed on the screen of the Micro:bit.</p>
 <p>The completed code for the Micro:bit, which signals the start of measuring time.</p>
@@ -324,15 +325,15 @@ This pin will be used as the time “trigger”. More precisely, the hook touchi
 </ul>
 <p>Clicking on button A resets the device and sets the initial values of the variables <strong>Time</strong> and <strong>Counter</strong>.
 Values for the variable <strong>Counter</strong> can be found in the category <img alt="Logic" src="_images/s4.png" />:</p>
-<img alt="_images/40.png" class="align-center" src="_images/40.png" />
+<img alt="_images/401.png" class="align-center" src="_images/401.png" />
 <p>The next step is to create the space for communication with the ID group 50:</p>
-<img alt="_images/36.png" class="align-center" src="_images/36.png" />
+<img alt="_images/361.png" class="align-center" src="_images/361.png" />
 <p>The <code class="docutils literal notranslate"><span class="pre">P1</span></code> pin is the pin the hook is connected to via the crocodile clips. This pin will be used as the time “trigger”:</p>
-<img alt="_images/41.png" class="align-center" src="_images/41.png" />
+<img alt="_images/411.png" class="align-center" src="_images/411.png" />
 <p>When the user clicks button B, the time it took for the user to complete the “exercise” will be displayed:</p>
-<img alt="_images/421.png" class="align-center" src="_images/421.png" />
+<img alt="_images/422.png" class="align-center" src="_images/422.png" />
 <p>When the Micro:bit accepts the radio signal (number) from the other Micro:bit device, the clock starts and the value of the variable <strong>Time</strong> changes by 1, after every second until the end of the “exercise”:</p>
-<img alt="_images/431.png" class="align-center" src="_images/431.png" />
+<img alt="_images/432.png" class="align-center" src="_images/432.png" />
 <p>The completed code for the Micro:bit, which measures the time from the beginning of the “game”:</p>
 <img alt="_images/43_.png" class="align-center" src="_images/43_.png" />
 <p>When you have transferred all of these codes to your Micro:bits, you will be ready to “test” your motor skills and begin to “exercise” your weaker hand.</p>

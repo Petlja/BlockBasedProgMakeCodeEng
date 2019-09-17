@@ -197,6 +197,7 @@
     </div>
   </div>
 </nav>
+<br/>
 
 
 <div class="container col-md-12" id="continue-reading"></div>
@@ -243,26 +244,26 @@ We will use the Micro:bit to produce the octave C, D, E, F, G, A, H (B).</p>
 Now, we want to program Micro:bits to send information - corresponding numbers (for corresponding tones) when a specific PIN is pressed. In addition, we need to program Micro:bits to communicate with each other. This way, depending on the number (tone) Micro:bits “produce”, or more accurately send, the Micro:bit will receive that number, and the headphones will reproduce the desired tone.</p>
 <p><strong>Step 3</strong></p>
 <p>When we want to establish communication (to use the radio communication) between Micro:bits, all included Micro:bits have to belong to the same group, i.e. they have to use the same group ID. By creating the ID group, we are actually creating the space in which the devices will communicate.</p>
-<p>To create an ID group, we need to drag the block <img alt="radioset" src="_images/s22.png" /> from the category <img alt="Radio" src="_images/s21.png" /> into the block <img alt="onstart" src="_images/onstart.png" /> from the category <img alt="Basic" src="_images/s2.png" />. Into the space <img alt="ID" src="_images/s23.png" /> we type the desired number for the group ID. This can be any number. We will leave the number 1. This way, we have created the group with the ID 1 in which all Micro:bits will communicate.</p>
+<p>To create an ID group, we need to drag the block <img alt="radioset" src="_images/s221.png" /> from the category <img alt="Radio" src="_images/s211.png" /> into the block <img alt="onstart" src="_images/onstart.png" /> from the category <img alt="Basic" src="_images/s2.png" />. Into the space <img alt="ID" src="_images/s231.png" /> we type the desired number for the group ID. This can be any number. We will leave the number 1. This way, we have created the group with the ID 1 in which all Micro:bits will communicate.</p>
 <p>The part of the code, which creates the group for communication:</p>
-<img alt="_images/s24.png" class="align-center" src="_images/s24.png" />
+<img alt="_images/s241.png" class="align-center" src="_images/s241.png" />
 <p><strong>Step 4</strong></p>
 <p>We need to add the block <img alt="radiosend" src="_images/s30.png" /> to the part of the code, which is designed to register an event (when the fruit is touched), in order to send the radio signal to another device based on which this other device will “react”, i.e. when we touch (press) the fruit we will hear a tone.</p>
-<p>The event will be registered when one of the pins on the Micro:bit is pressed. To achieve this, we need to introduce the block <img alt="onpin" src="_images/s25.png" /> from the category <img alt="Input" src="_images/s26.png" />. From the drop-down list of the block we will choose the pin (P0, P1, P2), which initiates the event - sending the number (tone) that will be displayed.</p>
+<p>The event will be registered when one of the pins on the Micro:bit is pressed. To achieve this, we need to introduce the block <img alt="onpin" src="_images/s251.png" /> from the category <img alt="Input" src="_images/s261.png" />. From the drop-down list of the block we will choose the pin (P0, P1, P2), which initiates the event - sending the number (tone) that will be displayed.</p>
 <p>We need to define the way we will present (store) values of the desired tones (Middle C or 262, Middle D or 294, Middle E or 330, Middle F or 349, Middle G or 392, Middle A or 440, Middle H (B) or 494). Apart from this, we also need to define values for each of the notes mentioned above.
 We can solve this problem by introducing the <strong>variable</strong>.</p>
 <p>A variable can be understood as a space in the computer memory, something like a box, in which, during the execution of the program, we can store some interim values.
 Variables have names. When we want to use the value of the variable, it is enough just to use its name.</p>
 <p>A variable is created in the following manner, in the category Variables (1), click on the button Make a variable (2) and type in the name of that variable in the field (3), in our case the name Tone. By clicking the button OK (4), you have created a variable (5).</p>
-<img alt="_images/s29.png" class="align-center" src="_images/s29.png" />
+<img alt="_images/s291.png" class="align-center" src="_images/s291.png" />
 <p>The value of the variable <code class="docutils literal notranslate"><span class="pre">Tone</span></code> will go from 1 to 8.</p>
 <p>In case <code class="docutils literal notranslate"><span class="pre">P1</span></code> pin was pressed, we will set the initial value at 1 for the variable <code class="docutils literal notranslate"><span class="pre">Tone</span></code>, by using the block <img alt="setTon" src="_images/n1.png" />.</p>
-<p>We can send a radio signal to the Micro:bit by using the block <img alt="radiosend" src="_images/s30.png" />, next we will drag the variable <code class="docutils literal notranslate"><span class="pre">Tone</span></code>, which we want to send, into the part <img alt="blok1" src="_images/s32.png" />, i.e. we will create the <img alt="Ton" src="_images/s33.png" /> block.</p>
+<p>We can send a radio signal to the Micro:bit by using the block <img alt="radiosend" src="_images/s30.png" />, next we will drag the variable <code class="docutils literal notranslate"><span class="pre">Tone</span></code>, which we want to send, into the part <img alt="blok1" src="_images/s321.png" />, i.e. we will create the <img alt="Ton" src="_images/s331.png" /> block.</p>
 <p>We create the block:</p>
 <img alt="_images/s34_.png" class="align-center" src="_images/s34_.png" />
 <p>The same procedure should be used for the <code class="docutils literal notranslate"><span class="pre">P2</span></code> pin. However, we will set the initial value of the variable <code class="docutils literal notranslate"><span class="pre">Tone</span></code> at 2, if the <code class="docutils literal notranslate"><span class="pre">P2</span></code> pin is pressed.</p>
 <p>The look of the code for the piano keys (C, D):</p>
-<img alt="_images/s34.png" class="align-center" src="_images/s34.png" />
+<img alt="_images/s341.png" class="align-center" src="_images/s341.png" />
 <p>The final look of the program, which sends information about which pin has been pressed (<code class="docutils literal notranslate"><span class="pre">P1</span></code> or <code class="docutils literal notranslate"><span class="pre">P2</span></code>):</p>
 <img alt="_images/n7.png" class="align-center" src="_images/n7.png" />
 <p>The next step is for the Micro:bit to receive the information (in our case a number) based on which it will “react” and produce a sound.</p>
@@ -274,14 +275,14 @@ Variables have names. When we want to use the value of the variable, it is enoug
 <img alt="_images/3132.png" class="align-center" src="_images/3132.png" />
 <p>The look of the block:</p>
 <img alt="_images/n4.png" class="align-center" src="_images/n4.png" />
-<p>We will add one more condition (<code class="docutils literal notranslate"><span class="pre">P2</span></code> pin pressed) to the block <img alt="ifthen" src="_images/s3.png" /> by clicking on the sign <img alt="plus" src="_images/s15.png" />. If the <code class="docutils literal notranslate"><span class="pre">P2</span></code> pin is pressed, the tone <code class="docutils literal notranslate"><span class="pre">D</span></code> will be reproduced.</p>
+<p>We will add one more condition (<code class="docutils literal notranslate"><span class="pre">P2</span></code> pin pressed) to the block <img alt="ifthen" src="_images/s3.png" /> by clicking on the sign <img alt="plus" src="_images/s151.png" />. If the <code class="docutils literal notranslate"><span class="pre">P2</span></code> pin is pressed, the tone <code class="docutils literal notranslate"><span class="pre">D</span></code> will be reproduced.</p>
 <p>The look of the block:</p>
 <img alt="_images/n5.png" class="align-center" src="_images/n5.png" />
 <p><strong>Note</strong>: The Micro:bit has to be connected to the speakers or headphones, as shown in the figure below,  for the sound to be reproduced.</p>
 <img alt="_images/34.png" class="align-center" src="_images/34.png" />
 <p>The final look of the program for the reproduction of tones <code class="docutils literal notranslate"><span class="pre">C</span></code> and <code class="docutils literal notranslate"><span class="pre">D</span></code>:</p>
 <img alt="_images/n6.png" class="align-center" src="_images/n6.png" />
-<p>Download the .hex file to your computer by clicking on the button <img alt="dugme1" src="_images/s36.png" /> or button <a class="reference internal" href="_images/291.png"><img alt="dugme2" src="_images/291.png" style="width: 199px;" /></a>. The Micro:bit will be ready to start working once you have dragged the file onto it.</p>
+<p>Download the .hex file to your computer by clicking on the button <img alt="dugme1" src="_images/s361.png" /> or button <a class="reference internal" href="_images/291.png"><img alt="dugme2" src="_images/291.png" style="width: 199px;" /></a>. The Micro:bit will be ready to start working once you have dragged the file onto it.</p>
 <p>We hold the banana in one hand and use the other hand to play other fruit.</p>
 <p>We can program the remaining two Micro:bits the same way, for the tones Middle E or 330, F or 349, Middle G or 392, Middle A or 440, Middle H (B) or 494.</p>
 <p>The final program code for the Micro:bit used to send the information about which pin has been pressed, based on which tones <code class="docutils literal notranslate"><span class="pre">E</span></code>, <code class="docutils literal notranslate"><span class="pre">F</span></code> and <code class="docutils literal notranslate"><span class="pre">G</span></code> will be reproduced:</p>

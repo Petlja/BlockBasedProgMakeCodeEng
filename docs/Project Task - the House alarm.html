@@ -197,6 +197,7 @@
     </div>
   </div>
 </nav>
+<br/>
 
 
 <div class="container col-md-12" id="continue-reading"></div>
@@ -237,18 +238,18 @@
 <p>When we want to establish communication (to use radio communication) between Micro:bits, all included Micro:bits must belong to the same group, i.e. the must use the same group ID.</p>
 <p><strong>Step 3</strong></p>
 <p>By creating the group ID, we actually create a space where the devices will communicate.</p>
-<p>To create an ID group, we need to drag the block <img alt="radioset" src="_images/s22.png" /> from the category <img alt="Radio" src="_images/s21.png" /> into the block <img alt="onstart" src="_images/onstart.png" /> from the category <img alt="Basic" src="_images/s2.png" />. Into the space <img alt="ID" src="_images/s23.png" /> we type the desired number for the group ID. This can be any number. We will leave the number 1. This way, we have created the group with the ID 1 in which all Micro:bits will communicate.</p>
+<p>To create an ID group, we need to drag the block <img alt="radioset" src="_images/s221.png" /> from the category <img alt="Radio" src="_images/s211.png" /> into the block <img alt="onstart" src="_images/onstart.png" /> from the category <img alt="Basic" src="_images/s2.png" />. Into the space <img alt="ID" src="_images/s231.png" /> we type the desired number for the group ID. This can be any number. We will leave the number 1. This way, we have created the group with the ID 1 in which all Micro:bits will communicate.</p>
 <p>The part of the code, which creates the group for communication:</p>
-<img alt="_images/s24.png" class="align-center" src="_images/s24.png" />
+<img alt="_images/s241.png" class="align-center" src="_images/s241.png" />
 <p><strong>Step 4</strong></p>
 <p>Drag the block <img alt="if..then" src="_images/s3.png" /> from the category <img alt="Logic" src="_images/s4.png" /> into the block <img alt="forever" src="_images/s1.png" />, located in the category <img alt="Basic" src="_images/s2.png" />.</p>
-<p>Into the condition input field <img alt="uslov" src="_images/s5.png" /> drag the block <img alt="uslov1" src="_images/s7.png" /> (located in the category <img alt="Input" src="_images/s6.png" />).</p>
-<p>From the drop-down list of the block <img alt="uslov1" src="_images/s7.png" />:</p>
-<img alt="_images/s8.png" class="align-center" src="_images/s8.png" />
+<p>Into the condition input field <img alt="uslov" src="_images/s51.png" /> drag the block <img alt="uslov1" src="_images/s71.png" /> (located in the category <img alt="Input" src="_images/s6.png" />).</p>
+<p>From the drop-down list of the block <img alt="uslov1" src="_images/s71.png" />:</p>
+<img alt="_images/s81.png" class="align-center" src="_images/s81.png" />
 <p>choose the option <img alt="shake" src="_images/s9.png" />. This option detects movements.</p>
-<img alt="_images/s10.png" class="align-center" src="_images/s10.png" />
+<img alt="_images/s101.png" class="align-center" src="_images/s101.png" />
 <p>Based on the setup of the task, when a movement is registered (or in our case when the conditions are fulfilled), the Micro:bit will send a certain value by using the block <img alt="radiosend" src="_images/s30.png" />.</p>
-<p>We will put the number 5 into the input field <img alt="broj" src="_images/s32.png" /> (any value can be entered). For the sensor to react, i.e. detect movement, we need to set it so it takes a certain amount of time, let’s put 3 seconds (or 3000 milliseconds). For this, we will use the block <img alt="time" src="_images/s39.png" /> from the category <img alt="Basic" src="_images/s2.png" />. Into the input field <img alt="vreme" src="_images/s40.png" /> we will put 3000ms, which will be the sensor response time, with regard to the change that has occurred.</p>
+<p>We will put the number 5 into the input field <img alt="broj" src="_images/s321.png" /> (any value can be entered). For the sensor to react, i.e. detect movement, we need to set it so it takes a certain amount of time, let’s put 3 seconds (or 3000 milliseconds). For this, we will use the block <img alt="time" src="_images/s39.png" /> from the category <img alt="Basic" src="_images/s2.png" />. Into the input field <img alt="vreme" src="_images/s40.png" /> we will put 3000ms, which will be the sensor response time, with regard to the change that has occurred.</p>
 <img alt="_images/s48.png" class="align-center" src="_images/s48.png" />
 <p><strong>Step 5</strong></p>
 <p>Download the .hex file to your computer by clicking on the button <img alt="dugme1" src="_images/s49.png" /> or button <a class="reference internal" href="_images/291.png"><img alt="dugme2" src="_images/291.png" style="width: 199px;" /></a>. The Micro:bit will be ready to start working once you have dragged the file onto it.</p>
@@ -256,8 +257,8 @@
 <p>Now, we have to program the second Micro:bit to detect the changes in temperature and light level, and to send that information to the Micro:bit, which will react to this by making a sound.
 In order for the Micro:bits to communicate, they have to belong to the same ID group.</p>
 <p>We have already created the group with the ID 1 where all of our Micro:bits will communicate:</p>
-<img alt="_images/s24.png" class="align-center" src="_images/s24.png" />
-<p>Drag the block <img alt="if..then" src="_images/s3.png" /> form the category <img alt="Logic" src="_images/s4.png" /> into the block <img alt="forever" src="_images/s1.png" />. We also need to drag the blocks that define the conditions into the condition input field <img alt="uslov" src="_images/s5.png" />. One condition will be that the temperature is higher than 30 degrees, and the other condition will be that the light level is higher than 150.</p>
+<img alt="_images/s241.png" class="align-center" src="_images/s241.png" />
+<p>Drag the block <img alt="if..then" src="_images/s3.png" /> form the category <img alt="Logic" src="_images/s4.png" /> into the block <img alt="forever" src="_images/s1.png" />. We also need to drag the blocks that define the conditions into the condition input field <img alt="uslov" src="_images/s51.png" />. One condition will be that the temperature is higher than 30 degrees, and the other condition will be that the light level is higher than 150.</p>
 <p>Conditions can be complex (created by connecting simple conditions).</p>
 <p>In our case, the simple conditions are that the temperature is higher than 30, or that the light level is higher than 150.</p>
 <p>We define our simple conditions with the block <img alt="poredjenje" src="_images/s53.png" />.</p>
@@ -269,13 +270,13 @@ In order for the Micro:bits to communicate, they have to belong to the same ID g
 <p>You use logical (boolean) operators to connect simple conditions (AND, OR, NOT).</p>
 <p>In MakeCode, logical (boolean) operators are represented as follows:</p>
 <p><img alt="and" src="_images/s50.png" /> - Connects two conditions, and it returns True as the result only if both conditions are True.</p>
-<p><img alt="or" src="_images/s51.png" /> - Connects two conditions, and it returns True as the result if at least one condition is True.</p>
+<p><img alt="or" src="_images/s511.png" /> - Connects two conditions, and it returns True as the result if at least one condition is True.</p>
 <p><img alt="not" src="_images/s52.png" /> - It is placed in front of one condition, and it returns True as the result in case the condition is not fulfilled.</p>
 <p>The condition, which checks whether there has been a change in temperature or light level, is defined by the following block:</p>
 <img alt="_images/s58.png" class="align-center" src="_images/s58.png" />
 <p>The look of the conditional block:</p>
 <img alt="_images/s60.png" class="align-center" src="_images/s60.png" />
-<p>Based on the setup of the task, when the change in temperature or light level has been registered, the Micro:bit will send a certain value by using the block <img alt="radiosend" src="_images/s30.png" />. We will put number 10 into the input field <img alt="broj" src="_images/s32.png" /> (any value can be entered). For the sensor to react, i.e. detect changes, we need to set it so it takes a certain amount of time, let’s put 3 seconds (or 3000 milliseconds). For this, we will use the block <img alt="time" src="_images/s39.png" /> from the category <img alt="Basic" src="_images/s2.png" />. Into the input field <img alt="vreme" src="_images/s40.png" /> we will put 3000ms, which will be the sensor response time, with regard to the change which has occurred.</p>
+<p>Based on the setup of the task, when the change in temperature or light level has been registered, the Micro:bit will send a certain value by using the block <img alt="radiosend" src="_images/s30.png" />. We will put number 10 into the input field <img alt="broj" src="_images/s321.png" /> (any value can be entered). For the sensor to react, i.e. detect changes, we need to set it so it takes a certain amount of time, let’s put 3 seconds (or 3000 milliseconds). For this, we will use the block <img alt="time" src="_images/s39.png" /> from the category <img alt="Basic" src="_images/s2.png" />. Into the input field <img alt="vreme" src="_images/s40.png" /> we will put 3000ms, which will be the sensor response time, with regard to the change which has occurred.</p>
 <p>The look of the program when a change in temperature or light level is detected:</p>
 <img alt="_images/s59.png" class="align-center" src="_images/s59.png" />
 <p><strong>Step 7</strong></p>
@@ -283,11 +284,11 @@ In order for the Micro:bits to communicate, they have to belong to the same ID g
 <p><strong>Step 8</strong></p>
 <p>Finally, we need to program the third Micro:bit. This Micro:bit will make a loud sound when it receives certain information from the other two Micro:bits.</p>
 <p>We will create a group with ID 1:</p>
-<img alt="_images/s24.png" class="align-center" src="_images/s24.png" />
-<p>The next step is for this Micro:bit to receive information (in our case a number) on the basis of which it will “respond” by making a sound. To achieve this, we will drag the following block from the category <img alt="Radio" src="_images/s21.png" />:</p>
+<img alt="_images/s241.png" class="align-center" src="_images/s241.png" />
+<p>The next step is for this Micro:bit to receive information (in our case a number) on the basis of which it will “respond” by making a sound. To achieve this, we will drag the following block from the category <img alt="Radio" src="_images/s211.png" />:</p>
 <img alt="_images/s30.png" class="align-center" src="_images/s30.png" />
-<p>Into it, we will drag the block <img alt="if..then" src="_images/s3.png" />. Into the condition input field <img alt="uslov" src="_images/s5.png" /> we need to drag the condition, which will check the numbers (5, 10) received from the other two Micro:bits.</p>
-<p>Using the <img alt="plus" src="_images/s15.png" /> sign, we will introduce one more condition. Into the branch with the condition <img alt="uslov5" src="_images/s63.png" /> and into the branch with the condition <img alt="uslov10" src="_images/s64.png" />, we will drag the block <img alt="melodija" src="_images/s65.png" /> (from the drop-down list of this block we will choose the melody <code class="docutils literal notranslate"><span class="pre">ringtone</span></code>) from the category <img alt="Music" src="_images/s66.png" />, which is used for producing sound.
+<p>Into it, we will drag the block <img alt="if..then" src="_images/s3.png" />. Into the condition input field <img alt="uslov" src="_images/s51.png" /> we need to drag the condition, which will check the numbers (5, 10) received from the other two Micro:bits.</p>
+<p>Using the <img alt="plus" src="_images/s151.png" /> sign, we will introduce one more condition. Into the branch with the condition <img alt="uslov5" src="_images/s63.png" /> and into the branch with the condition <img alt="uslov10" src="_images/s64.png" />, we will drag the block <img alt="melodija" src="_images/s65.png" /> (from the drop-down list of this block we will choose the melody <code class="docutils literal notranslate"><span class="pre">ringtone</span></code>) from the category <img alt="Music" src="_images/s66.png" />, which is used for producing sound.
 In addition to this block, we will also add a time interval of one second.</p>
 <p>The final look of the code:</p>
 <img alt="_images/s67.png" class="align-center" src="_images/s67.png" />

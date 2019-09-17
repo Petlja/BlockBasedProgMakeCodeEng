@@ -197,6 +197,7 @@
     </div>
   </div>
 </nav>
+<br/>
 
 
 <div class="container col-md-12" id="continue-reading"></div>
@@ -205,22 +206,22 @@
   
   <div class="section" id="working-with-blocks-from-the-radio-category">
 <h1>Working with Blocks from the Radio Category<a class="headerlink" href="#working-with-blocks-from-the-radio-category" title="Permalink to this headline">¶</a></h1>
-<p>In this lesson, we will get to know the blocks from the category <img alt="Radio" src="_images/s21.png" />, i.e. the blocks which are used for establishing a connection and communication between two or more Micro:bit devices. As in this case we will not use Micro:bits, in the simulator screen there will be two Micro:bits displayed.
+<p>In this lesson, we will get to know the blocks from the category <img alt="Radio" src="_images/s211.png" />, i.e. the blocks which are used for establishing a connection and communication between two or more Micro:bit devices. As in this case we will not use Micro:bits, in the simulator screen there will be two Micro:bits displayed.
 In the simulator, all created codes will work on both virtual Micro:bits.</p>
 <p>Create a program which, when button A is pressed, sends a random number from the interval 0 to 100. When this information is received, a light appears in the middle of the screen, forming a 3x3 square if the received number is even; otherwise, the value of that number is displayed.</p>
 <p>By creating an ID group, we actually create a space where the devices will communicate.</p>
-<p>To create an ID group, we need to drag the block <img alt="radioset" src="_images/s22.png" /> from the category <img alt="Radio" src="_images/s21.png" /> into the block <img alt="onstart" src="_images/s20.png" />. Into the input field for numbers and text, we can enter the desired number for the ID group, which can be any number. We will leave it to be 1. This way we created the ID 1 group, where both Micro:bits can communicate.</p>
-<img alt="_images/s24.png" class="align-center" src="_images/s24.png" />
+<p>To create an ID group, we need to drag the block <img alt="radioset" src="_images/s221.png" /> from the category <img alt="Radio" src="_images/s211.png" /> into the block <img alt="onstart" src="_images/s20.png" />. Into the input field for numbers and text, we can enter the desired number for the ID group, which can be any number. We will leave it to be 1. This way we created the ID 1 group, where both Micro:bits can communicate.</p>
+<img alt="_images/s241.png" class="align-center" src="_images/s241.png" />
 <p>NOTE: When we use the blocks from the category <code class="docutils literal notranslate"><span class="pre">Radio</span></code> there will be two Micro:bits displayed in the simulator.</p>
 <p>The variable <code class="docutils literal notranslate"><span class="pre">Counter</span></code> stores the value obtained from using the block <img alt="pickrandom" src="_images/p49.png" />, or more precisely, the variable <code class="docutils literal notranslate"><span class="pre">Counter</span></code> receives one of the random values from the interval 0 to 100.
-When button A is pressed, the Micro:bit sends the value of the variable <code class="docutils literal notranslate"><span class="pre">Counter</span></code> by using the block <img alt="send" src="_images/s30.png" /> from the category <img alt="Radio" src="_images/s21.png" />.</p>
+When button A is pressed, the Micro:bit sends the value of the variable <code class="docutils literal notranslate"><span class="pre">Counter</span></code> by using the block <img alt="send" src="_images/s30.png" /> from the category <img alt="Radio" src="_images/s211.png" />.</p>
 <p>The look of the code:</p>
 <img alt="_images/p73.png" class="align-center" src="_images/p73.png" />
-<p>When the information is sent (in our case Counter), this information has to be received. Based on this information, the execution of the program is determined (the square will be displayed if the received number is even; otherwise, the value of the received number will be displayed). For this, we will drag a block from the <img alt="Radio" src="_images/s21.png" /> category:</p>
+<p>When the information is sent (in our case Counter), this information has to be received. Based on this information, the execution of the program is determined (the square will be displayed if the received number is even; otherwise, the value of the received number will be displayed). For this, we will drag a block from the <img alt="Radio" src="_images/s211.png" /> category:</p>
 <img alt="_images/p73.png" class="align-center" src="_images/p73.png" />
 <p>Into this block, we will drag the block which defines the variable <code class="docutils literal notranslate"><span class="pre">Remainder</span></code>, which stores the value for integer division of the <code class="docutils literal notranslate"><span class="pre">Counter</span></code> by 2:</p>
 <img alt="_images/p64.png" class="align-center" src="_images/p64.png" />
-<p>This is followed by the block <img alt="ifthen" src="_images/s3.png" />. In the part <img alt="uslov" src="_images/s5.png" /> we will check if there is a remainder after the integer division of the Counter by 2. If this is true, a 3x3 square will be displayed. Otherwise, if the condition has not been fulfilled, which means that the remainder is not 0, the value of the variable <code class="docutils literal notranslate"><span class="pre">Counter</span></code> will be displayed:</p>
+<p>This is followed by the block <img alt="ifthen" src="_images/s3.png" />. In the part <img alt="uslov" src="_images/s51.png" /> we will check if there is a remainder after the integer division of the Counter by 2. If this is true, a 3x3 square will be displayed. Otherwise, if the condition has not been fulfilled, which means that the remainder is not 0, the value of the variable <code class="docutils literal notranslate"><span class="pre">Counter</span></code> will be displayed:</p>
 <img alt="_images/p75.png" class="align-center" src="_images/p75.png" />
 <p>The final look of the code:</p>
 <img alt="_images/p76.png" class="align-center" src="_images/p76.png" />

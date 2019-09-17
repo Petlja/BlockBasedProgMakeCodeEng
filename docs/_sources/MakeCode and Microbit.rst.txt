@@ -149,7 +149,7 @@ Before we start creating interesting projects using Micro:bit devices, we will t
 
    Blocks from the Basic Category.rst
    Working with Blocks from the Input Category.rst
-   
+   Blocks from the Music Category.rst
    Working with Blocks from the Led Category.rst
    Working with Blocks from the Math and Variables Categories.rst
    Working with Blocks from the Logic Category.rst
