@@ -43,8 +43,6 @@ options(
     )
 )
 
-version = pkg_resources.require("runestone")[0].version
-options.build.template_args['runestone_version'] = version
 
 # If DBURL is in the environment override dburl
 options.build.template_args['dburl'] = get_dburl(outer=locals())
